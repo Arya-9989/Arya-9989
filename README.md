@@ -59,23 +59,9 @@ I love building secure, scalable, and intelligent systems that bridge automation
 
 ---
 
-### 📊 GitHub Stats  
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Arya-9989&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" width="49%">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Arya-9989&theme=tokyonight&hide_border=true&background=00000000" width="49%">
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arya-9989&layout=compact&theme=tokyonight&hide_border=true" width="49%">
-</p>
-
----
-
 ### 🌐 Connect With Me  
 <p align="center">
-  <a href="https://linkedin.com/in/arya-shrikant-mahindrakar" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
+
   <a href="mailto:arya.mahindrakar.09@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
