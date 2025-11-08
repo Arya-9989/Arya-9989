@@ -10,7 +10,7 @@
 <h3 align="center">☁️ Cloud & Cybersecurity Enthusiast | 🧠 Python Developer | 🛡️ Tech Explorer</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FFFF&center=true&vCenter=true&width=700&lines=B.Tech+in+Cloud+Technology+%26+InfoSec;Cybersecurity+%7C+Cloud+%7C+DevOps;Building+Secure+and+Scalable+Systems;Always+Learning,+Always+Exploring!+🚀" alt="Typing animation">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FFFF&center=true&vCenter=true&width=700&lines=B.Tech+in+Cloud+Technology+%26+InfoSec;Cybersecurity+%7C+Cloud+%7C+DevOps;Building+Secure+and+Scalable+Systems;Always+Learning,+Always+Exploring!+🚀>
 </p>
 
 ---
