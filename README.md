@@ -28,7 +28,7 @@ I love building secure, scalable, and intelligent systems that bridge automation
 
 ### ⚙️ Tech Stack  
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,django,html,css,bootstrap,js,gcp,aws,azure,docker,linux,grafana,git,github,vscode,mysql" />
+  <img src="https://skillicons.dev/icons?i=python,django,flask,html,css,bootstrap,js,gcp,aws,azure,docker,linux,grafana,git,github,vscode,mysql" />
 </p>
 
 ---
