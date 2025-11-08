@@ -1,23 +1,25 @@
-
-<!-- PROFILE README START -->
+<!-- 🌟 PROFILE README START -->
 
 <!-- Profile Banner -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
 </p>
 
-<h1 align="center">⚡ Hey, I'm Arya Shrikant Mahindrakar ⚡</h1>
+<h1 align="center">⚡ Hey, I'm <span style="color:#00FFFF;">Arya Shrikant Mahindrakar</span> ⚡</h1>
 <h3 align="center">☁️ Cloud & Cybersecurity Enthusiast | 🧠 Python Developer | 🛡️ Tech Explorer</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FFFF&center=true&vCenter=true&width=700&lines=B.Tech+in+Cloud+Technology+%26+InfoSec;Cybersecurity+%7C+Cloud+%7C+DevOps;Building+Secure+and+Scalable+Systems;Always+Learning,+Always+Exploring!+🚀>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FFFF&center=true&vCenter=true&width=750&lines=B.Tech+in+Cloud+Technology+%26+InfoSec;Cybersecurity+%7C+Cloud+%7C+DevOps;Building+Secure+and+Scalable+Systems;Always+Learning,+Always+Exploring!+🚀" />
 </p>
 
 ---
 
 ### 🧠 About Me  
+💫 I’m an aspiring **Cybersecurity Engineer** with a strong foundation in **Cloud Technology, DevOps, and Python development**.  
+I love building secure, scalable, and intelligent systems that bridge automation, analytics, and defense.  
+
 - 🎓 **B.Tech in Cloud Technology & Information Security**  
-- 💡 Passionate about **Cybersecurity**, **Cloud Infrastructure**, and **AI-driven Systems**  
+- 💡 Passionate about **Cybersecurity**, **Cloud Infrastructure**, and **AI-driven Defense Systems**  
 - 🐍 Skilled in **Python**, **Django**, **Linux**, **Virtualization**, and **DevOps Tools**  
 - 🔒 Currently developing a **Secure Evidence Archiving and Retrieval System** for digital forensics  
 - ⚙️ Experienced with **Wazuh**, **Grafana**, and **Apache Airflow** for monitoring, analytics, and automation  
@@ -26,41 +28,60 @@
 
 ### ⚙️ Tech Stack  
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,django,html,css,bootstrap,js,gcp,grafana,git,linux,aws,docker,azure,github,vscode,mysql" />
+  <img src="https://skillicons.dev/icons?i=python,django,html,css,bootstrap,js,gcp,aws,azure,docker,linux,grafana,git,github,vscode,mysql" />
 </p>
 
 ---
 
 ### 🚀 Featured Projects  
 
-🔹 **[Amazon Clothing](https://github.com/Arya-9989/Amazon-Clothing)** — Full-stack fashion store built using **Django + Bootstrap**, featuring user authentication, cart management, and secure checkout.  
+🔹 **[Amazon Clothing](https://github.com/Arya-9989/Amazon-Clothing)** — Full-stack fashion eCommerce store built using **Django + Bootstrap**, featuring authentication, cart management, and secure checkout.  
 
-🔹 **Ransomware Detection Tool** — A behavioral-analysis project that identifies encryption-based malware through real-time monitoring and anomaly detection.  
+🔹 **Ransomware Detection Tool** — A behavior-based security project that detects encryption-based malware using anomaly detection.  
 
-🔹 **Quantum-Resistant Cloud Encryption** — Research project on **post-quantum cryptography** to protect data in next-gen cloud environments.  
+🔹 **Quantum-Resistant Cloud Encryption** — Research project exploring **post-quantum cryptography** for securing data in future cloud systems.  
 
-🔹 **Secure Evidence Archiving and Retrieval System** — Framework for **tamper-proof forensic evidence storage** using encryption and audit trails.  
+🔹 **Secure Evidence Archiving and Retrieval System** — A tamper-proof framework for **digital forensic evidence storage** using encryption and audit trails.  
 
-🔹 **Wazuh Security Monitoring Setup** — Configured **Wazuh SIEM** for log analysis, threat detection, and alerting.  
+🔹 **Wazuh Security Monitoring Setup** — Deployed **Wazuh SIEM** for real-time log monitoring, anomaly detection, and threat response automation.  
 
-🔹 **Grafana Analytics Dashboard** — Developed **interactive Grafana dashboards** for real-time network and security metric visualization.  
+🔹 **Grafana Analytics Dashboard** — Designed **interactive dashboards** visualizing network performance, logs, and security insights.  
 
-🔹 **Apache Airflow Automation Pipeline** — Built automated **ETL and log-analysis workflows** to streamline data processing and security monitoring.  
+🔹 **Apache Airflow Automation Pipeline** — Built automated **ETL and log-analysis workflows** to optimize data processing and system monitoring.  
 
 ---
 
 ### 🏆 Achievements  
-- 🥇 Developed multiple **cybersecurity lab environments** integrating Wazuh, Airflow, Grafana, and VMware  
-- 🧠 Authored **IEEE-style research papers** on *Quantum-Resistant Cloud Encryption* and *Cooling Solutions for Datacenters*  
-- ⚙️ Built **real-world security tools** combining automation, visualization, and cloud integration  
-- 💬 Passionate about open-source collaboration and sharing knowledge in cybersecurity  
+- 🥇 Built multiple **cybersecurity lab environments** integrating Wazuh, Airflow, Grafana, and VMware  
+- 🧠 Authored **IEEE-style research papers** on *Quantum-Resistant Cloud Encryption* and *Cooling Solutions for Data Centers*  
+- ⚙️ Developed **real-world tools** merging automation, AI, and security analytics  
+- 💬 Actively exploring **open-source contributions** and community-based cybersecurity initiatives  
+
+---
+
+### 📊 GitHub Stats  
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Arya-9989&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" width="49%">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Arya-9989&theme=tokyonight&hide_border=true&background=00000000" width="49%">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arya-9989&layout=compact&theme=tokyonight&hide_border=true" width="49%">
+</p>
 
 ---
 
 ### 🌐 Connect With Me  
 <p align="center">
-  <a href="https://github.com/Arya-9989" target="_blank"><img src="https://skillicons.dev/icons?i=github" /></a>
-   <a href="mailto:arya.mahindrakar.09@gmail.com" target="_blank"><img src="https://skillicons.dev/icons?i=gmail" /></a>
+  <a href="https://linkedin.com/in/arya-shrikant-mahindrakar" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+  <a href="mailto:arya.mahindrakar.09@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  <a href="https://github.com/Arya-9989" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
 </p>
 
 ---
@@ -73,4 +94,4 @@
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
 </p>
 
-<!-- PROFILE README END -->
+<!-- 🌟 PROFILE README END -->
