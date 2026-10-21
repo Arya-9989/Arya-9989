@@ -35,27 +35,72 @@
 <!-- ═════════════════════════ ABOUT ═════════════════════════ -->
 ## 👨‍💻 About Me
 
-<img align="right" width="380" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arya-9989&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&langs_count=6" alt="Top languages" />
+<p align="center">
+  <img src="assets/about-terminal.svg" width="100%" alt="Terminal: Arya Mahindrakar, DevOps Engineer, AWS Certified Cloud Practitioner" />
+</p>
 
-I'm a **DevOps Engineer** with a B.Tech in **Cloud Technology & Information Security**. I take applications from code to production and keep them secure once they're there:
+<p align="center">
+  <b>I turn code into reliable, secure production systems.</b><br>
+  <sub>I work across the whole path to production: I write the backend, build the pipeline that ships it, run it on AWS,<br>and set up the monitoring and security that keep it healthy. Then I measure the result and make it faster.</sub>
+</p>
 
-- 🏗️ **Build** full-stack apps with Django, Node.js and React
-- 🔁 **Ship** them through Jenkins and GitHub Actions pipelines onto AWS
-- 📈 **Run** them with Grafana dashboards and threshold alerting
-- 🛡️ **Secure** them with JWT, RBAC, rate limiting, IAM policies and Wazuh SIEM
-- 🤖 **Extend** them with AI: Claude-powered personalization, RAG and ML fundamentals
+<h3 align="center">⚙️ What I Do</h3>
 
-<br clear="right" />
+<table>
+  <tr>
+    <td width="33%" align="center" valign="top">
+      <img src="https://skillicons.dev/icons?i=django,nodejs,react&theme=dark" height="40" alt="Django, Node.js, React" /><br>
+      <h4>🏗️ Build</h4>
+      <sub>Full-stack apps, REST APIs and real-time WebSocket engines handling <b>50+ live sessions</b></sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="https://skillicons.dev/icons?i=jenkins,githubactions,docker&theme=dark" height="40" alt="Jenkins, GitHub Actions, Docker" /><br>
+      <h4>🔁 Ship</h4>
+      <sub>CI/CD pipelines and zero-downtime releases that cut deploy downtime <b>from 20 min to under 2</b></sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="https://skillicons.dev/icons?i=aws,linux,bash&theme=dark" height="40" alt="AWS, Linux, Bash" /><br>
+      <h4>☁️ Run</h4>
+      <sub>AWS EC2, S3, IAM, VPC and RDS, with Linux process management and Bash automation</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center" valign="top">
+      <img src="https://skillicons.dev/icons?i=postgres,mongodb,go&theme=dark" height="40" alt="PostgreSQL, MongoDB, Go" /><br>
+      <h4>🔄 Automate</h4>
+      <sub>Airflow ETL pipelines and Go ingestion services that <b>save 10+ hours a week</b></sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="https://skillicons.dev/icons?i=grafana&theme=dark" height="40" alt="Grafana" /> <img src="https://img.shields.io/badge/Wazuh-3B5BDB?style=for-the-badge&logo=wazuh&logoColor=white" height="40" alt="Wazuh" /><br>
+      <h4>🛡️ Secure &amp; Observe</h4>
+      <sub>JWT, RBAC, rate limiting and IAM policies, plus Grafana alerting and Wazuh SIEM</sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="https://img.shields.io/badge/Claude_AI-D97757?style=for-the-badge&logo=anthropic&logoColor=white" height="40" alt="Claude AI" /><br>
+      <h4>🤖 Extend with AI</h4>
+      <sub>Claude-powered personalization with safety filtering, plus GenAI and RAG fundamentals</sub>
+    </td>
+  </tr>
+</table>
 
-```yaml
-name:        Arya Mahindrakar
-role:        DevOps Engineer
-education:   B.Tech, Cloud Technology & Information Security (2022-2026)
-university:  Ajeenkya D Y Patil University, Pune
-certified:   AWS Certified Cloud Practitioner (Apr 2026, valid to 2029)
-looking_for: DevOps · Cloud · Platform · Security engineering roles
-motto:       "Secure by design, scalable by default."
-```
+<table>
+  <tr>
+    <td>🔭 <b>Currently exploring</b></td>
+    <td>Machine Learning, Computer Vision and Generative AI (RAG)</td>
+  </tr>
+  <tr>
+    <td>💬 <b>Ask me about</b></td>
+    <td>CI/CD pipelines · Django &amp; Node.js backends · AWS · SIEM monitoring</td>
+  </tr>
+  <tr>
+    <td>🎯 <b>Looking for</b></td>
+    <td>DevOps, Cloud, Platform and Security engineering roles</td>
+  </tr>
+  <tr>
+    <td>⚡ <b>Motto</b></td>
+    <td><i>"Secure by design, scalable by default."</i></td>
+  </tr>
+</table>
 
 <!-- ═════════════════════════ SKILLS ═════════════════════════ -->
 ## 🧰 Tech Stack
