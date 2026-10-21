@@ -1,144 +1,210 @@
-<!-- 🌟 PROFILE README START -->
-
+<!-- ═════════════════════════ HEADER ═════════════════════════ -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
-</p>
-
-<h1 align="center">⚡ Hey, I'm Arya Mahindrakar ⚡</h1>
-<h3 align="center">🚀 DevOps Engineer · ☁️ Cloud & Security · 🤖 AI Integrations</h3>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=24&duration=2500&pause=800&color=00FFF9&center=true&vCenter=true&width=800&height=60&lines=Final-year+B.Tech+%7C+Cloud+Technology+%26+InfoSec;AWS+Certified+Cloud+Practitioner;CI%2FCD+with+Jenkins+%26+GitHub+Actions;Django+%7C+Node.js+%7C+React+%7C+Go;Monitoring+with+Grafana+%26+Wazuh+SIEM;Always+Learning%2C+Always+Exploring!" alt="Typing animation" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0077b6,100:00ffff&height=220&section=header&text=Arya%20Mahindrakar&fontSize=64&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=DevOps%20Engineer%20%E2%80%A2%20Cloud%20%E2%80%A2%20Security&descSize=20&descAlignY=58" width="100%" alt="Arya Mahindrakar, DevOps Engineer" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AWS-Certified_Cloud_Practitioner-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS Certified Cloud Practitioner" />
-  <img src="https://img.shields.io/badge/📍_Pune,_India-0d1117?style=for-the-badge" alt="Pune, India" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=700&color=00FFFF&center=true&vCenter=true&width=760&height=50&lines=I+build%2C+ship+and+secure+cloud+applications;AWS+Certified+Cloud+Practitioner;CI%2FCD+with+Jenkins+%26+GitHub+Actions;Django+%E2%80%A2+Node.js+%E2%80%A2+React+%E2%80%A2+Go;Observability+with+Grafana+%26+Wazuh+SIEM" alt="Typing animation" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Open_to_work-DevOps_·_Cloud_·_Security-00ffff?style=for-the-badge&labelColor=0d1117" alt="Open to DevOps, Cloud and Security roles" />
+  <img src="https://img.shields.io/badge/AWS-Certified_Cloud_Practitioner-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white&labelColor=232F3E" alt="AWS Certified Cloud Practitioner" />
+  <img src="https://img.shields.io/badge/📍-Pune,_India-00ffff?style=for-the-badge&labelColor=0d1117" alt="Pune, India" />
+</p>
+
+<p align="center">
+  <a href="mailto:arya.mahindrakar.09@gmail.com"><img src="https://img.shields.io/badge/Email_me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://github.com/Arya-9989?tab=repositories"><img src="https://img.shields.io/badge/Browse_my_repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" /></a>
   <img src="https://komarev.com/ghpvc/?username=Arya-9989&color=00ffff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
 </p>
 
----
+<!-- ═════════════════════════ IMPACT ═════════════════════════ -->
+<h2 align="center">📊 Impact at a Glance</h2>
 
-## 🧠 About Me
+<div align="center">
+<table>
+  <tr>
+    <td align="center" width="180"><h2>99.9%</h2><sub><b>Uptime</b> at $0 hosting cost<br><i>EcoQuest</i></sub></td>
+    <td align="center" width="180"><h2>↓ 90%</h2><sub><b>Deployment downtime</b><br>20 min → under 2 min on EC2</sub></td>
+    <td align="center" width="180"><h2>↓ 40%</h2><sub><b>Database read latency</b><br>MongoDB indexing + caching</sub></td>
+    <td align="center" width="180"><h2>10+ hrs</h2><sub><b>Saved every week</b><br>Airflow ETL automation</sub></td>
+  </tr>
+</table>
+</div>
 
-I'm a final-year **B.Tech student in Cloud Technology & Information Security** at Ajeenkya D Y Patil University, Pune. I work where **backend architecture, cloud infrastructure and AI** meet: I build production-style full-stack apps, automate their delivery with CI/CD, orchestrate ETL workflows, and lock them down with proper auth and monitoring.
+<!-- ═════════════════════════ ABOUT ═════════════════════════ -->
+## 👨‍💻 About Me
 
-```python
-class Arya:
-    role       = "DevOps Engineer"
-    education  = "B.Tech, Cloud Technology & Information Security (2022-2026)"
-    certified  = "AWS Certified Cloud Practitioner (2026)"
-    languages  = ["Python", "JavaScript", "TypeScript", "SQL", "Bash", "Go"]
-    cloud_ops  = ["AWS", "Docker", "Jenkins", "GitHub Actions", "Linux"]
-    data       = ["PostgreSQL", "MongoDB Atlas", "Apache Airflow"]
-    security   = ["Wazuh SIEM", "Grafana", "JWT", "RBAC", "IAM Policies"]
-    exploring  = ["Machine Learning", "Generative AI", "RAG"]
+<img align="right" width="380" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arya-9989&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&langs_count=6" alt="Top languages" />
 
-    def motto(self):
-        return "Secure by design, scalable by default."
+I'm a **DevOps Engineer** with a B.Tech in **Cloud Technology & Information Security**. I take applications from code to production and keep them secure once they're there:
+
+- 🏗️ **Build** full-stack apps with Django, Node.js and React
+- 🔁 **Ship** them through Jenkins and GitHub Actions pipelines onto AWS
+- 📈 **Run** them with Grafana dashboards and threshold alerting
+- 🛡️ **Secure** them with JWT, RBAC, rate limiting, IAM policies and Wazuh SIEM
+- 🤖 **Extend** them with AI: Claude-powered personalization, RAG and ML fundamentals
+
+<br clear="right" />
+
+```yaml
+name:        Arya Mahindrakar
+role:        DevOps Engineer
+education:   B.Tech, Cloud Technology & Information Security (2022-2026)
+university:  Ajeenkya D Y Patil University, Pune
+certified:   AWS Certified Cloud Practitioner (Apr 2026, valid to 2029)
+looking_for: DevOps · Cloud · Platform · Security engineering roles
+motto:       "Secure by design, scalable by default."
 ```
 
----
+<!-- ═════════════════════════ SKILLS ═════════════════════════ -->
+## 🧰 Tech Stack
 
-## ⚙️ Tech Stack
+<table>
+  <tr>
+    <td width="200"><b>💻 Languages</b></td>
+    <td><img src="https://skillicons.dev/icons?i=python,js,ts,go,bash&theme=dark" alt="Python, JavaScript, TypeScript, Go, Bash" /></td>
+  </tr>
+  <tr>
+    <td><b>⚙️ Backend</b></td>
+    <td><img src="https://skillicons.dev/icons?i=django,nodejs,express,fastapi&theme=dark" alt="Django, Node.js, Express, FastAPI" /><br><sub>Django REST Framework · RESTful APIs · WebSockets (Socket.io)</sub></td>
+  </tr>
+  <tr>
+    <td><b>🎨 Frontend</b></td>
+    <td><img src="https://skillicons.dev/icons?i=react,ts,tailwind,html,css&theme=dark" alt="React, TypeScript, Tailwind, HTML, CSS" /><br><sub>React 18 · Zustand · Progressive Web Apps</sub></td>
+  </tr>
+  <tr>
+    <td><b>☁️ Cloud & DevOps</b></td>
+    <td><img src="https://skillicons.dev/icons?i=aws,docker,jenkins,githubactions,linux,git,github&theme=dark" alt="AWS, Docker, Jenkins, GitHub Actions, Linux, Git, GitHub" /><br><sub>AWS EC2 · S3 · IAM · VPC · RDS · Linux process management</sub></td>
+  </tr>
+  <tr>
+    <td><b>🗄️ Data & Orchestration</b></td>
+    <td><img src="https://skillicons.dev/icons?i=postgres,mongodb&theme=dark" alt="PostgreSQL, MongoDB" /> <img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" height="40" alt="Apache Airflow" /><br><sub>ETL pipelines · MongoDB Atlas · Hadoop / Spark (exposure)</sub></td>
+  </tr>
+  <tr>
+    <td><b>🛡️ Security & Observability</b></td>
+    <td><img src="https://skillicons.dev/icons?i=grafana&theme=dark" alt="Grafana" /> <img src="https://img.shields.io/badge/Wazuh_SIEM-3B5BDB?style=for-the-badge&logo=wazuh&logoColor=white" height="40" alt="Wazuh SIEM" /><br><sub>JWT auth · RBAC · rate limiting · Helmet · CORS · IAM policies</sub></td>
+  </tr>
+  <tr>
+    <td><b>🤖 AI / ML</b></td>
+    <td><img src="https://img.shields.io/badge/Claude_AI-D97757?style=for-the-badge&logo=anthropic&logoColor=white" height="28" alt="Claude AI" /> <img src="https://img.shields.io/badge/Generative_AI_·_RAG-8A2BE2?style=for-the-badge" height="28" alt="Generative AI and RAG" /><br><sub>Supervised & unsupervised learning · model evaluation metrics</sub></td>
+  </tr>
+</table>
 
-| Area | Tools |
-| :-- | :-- |
-| **Languages** | <img src="https://skillicons.dev/icons?i=python,js,ts,go,bash" /> |
-| **Backend** | <img src="https://skillicons.dev/icons?i=django,nodejs,express,fastapi" /> |
-| **Frontend** | <img src="https://skillicons.dev/icons?i=react,tailwind,html,css" /> |
-| **Cloud & DevOps** | <img src="https://skillicons.dev/icons?i=aws,docker,jenkins,githubactions,linux,git,github" /> |
-| **Data** | <img src="https://skillicons.dev/icons?i=postgres,mongodb" /> ![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white) |
-| **Security & Observability** | <img src="https://skillicons.dev/icons?i=grafana" /> ![Wazuh](https://img.shields.io/badge/Wazuh_SIEM-3B5BDB?style=for-the-badge&logoColor=white) ![JWT](https://img.shields.io/badge/JWT_·_RBAC-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white) |
-
----
-
+<!-- ═════════════════════════ PROJECTS ═════════════════════════ -->
 ## 🚀 Featured Projects
 
-#### 🎮 EcoQuest Platform
-`React` `Node.js` `MongoDB` `Socket.io` `Claude AI`
-- Serverless full-stack platform for 3 user roles: **99.9% uptime at zero hosting cost** (Vercel + Render + MongoDB Atlas)
-- Real-time Socket.io engine keeping **50+ live multiplayer game states** in sync with sub-second latency
-- **40% lower database read latency** through compound MongoDB indexes and tiered caching
-- AI-personalized learning paths across 3 difficulty tiers, with a two-layer content filter for topic safety
+### 🎮 EcoQuest Platform
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socketdotio&logoColor=white) ![Claude AI](https://img.shields.io/badge/Claude_AI-D97757?style=flat-square&logo=anthropic&logoColor=white)
 
-#### ⚡ High-Throughput Analytics Engine
-`Go` `Docker` `PostgreSQL` `Apache Airflow`
-- Go microservice ingesting **thousands of tracking events per minute** with zero data loss
-- Airflow DAGs turning raw logs into query-optimized data marts, **saving 10+ hours of manual reporting a week**
+- Serverless full-stack platform for 3 user roles, reaching **99.9% uptime at zero hosting cost** (Vercel + Render + MongoDB Atlas)
+- Real-time Socket.io engine that keeps **50+ live multiplayer game states** in sync with sub-second latency
+- **40% lower database read latency** from compound MongoDB indexes and tiered Node-cache TTLs
+- **10+ API endpoints with zero vulnerabilities** in simulated payload attacks (JWT/RBAC middleware, rate limiting, strict CORS)
+- Claude Haiku engine adapts learning paths across 3 performance tiers, behind a two-layer topic-safety filter
 
-#### 🏢 [Multi-Tenant Microservices Architecture](https://github.com/Arya-9989/secure-multi-tenant-platform)
-`Python` `Django REST` `AWS EC2` `Jenkins` `Docker`
-- B2B Django backend with **complete organization-level data isolation** via query-scoped ORM filtering and RBAC
-- Jenkins CI/CD triggered by GitHub webhooks ([pipeline repo](https://github.com/Arya-9989/secure-cloud-microservices-platform))
-- Bash-scripted service swapping on EC2 cut **deployment downtime by 90% (20 min → under 2 min)**
+### ⚡ High-Throughput Analytics Engine
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
 
-#### 🛒 [Scalable E-Commerce API Backend](https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform)
-`Django` `Python` `SQL`
-- Order workflows, stateful cart management and secure authentication
-- **30% faster catalog queries** through data modeling and Django ORM optimization
+- Go microservice ingesting **thousands of tracking events per minute with zero data loss**, using PostgreSQL connection pooling
+- Fully containerized with Docker, which **eliminated environment drift** for new developers
+- Airflow DAGs turn raw logs into query-optimized data marts, **saving 10+ hours of manual reporting every week**
 
-#### 🛡️ Infrastructure Observability & SIEM Platform
-`Grafana` `Wazuh SIEM` `Linux`
-- Centralized Grafana monitoring with threshold alerts across virtualized Linux hosts
-- Wazuh SIEM auditing **100% of critical file-integrity events and unauthorized access attempts**
+### 🏢 Multi-Tenant Microservices Architecture
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django_REST-092E20?style=flat-square&logo=django&logoColor=white) ![AWS EC2](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white) ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+- B2B Django backend with **100% organization-level data isolation** through query-scoped ORM filtering and strict permission classes
+- Declarative **Jenkins CI/CD pipelines** triggered by GitHub webhooks for continuous delivery to staging
+- Bash process-management scripts for seamless service swaps on EC2: **deployment downtime cut by 90%**
+- 📂 Code: [secure-multi-tenant-platform](https://github.com/Arya-9989/secure-multi-tenant-platform) · [secure-cloud-microservices-platform](https://github.com/Arya-9989/secure-cloud-microservices-platform)
+
+### 🛡️ Infrastructure Observability & SIEM Platform
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) ![Wazuh](https://img.shields.io/badge/Wazuh_SIEM-3B5BDB?style=flat-square&logo=wazuh&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+
+- Centralized **Grafana monitoring with threshold-based alerting** across virtualized Linux hosts
+- **Wazuh SIEM auditing 100% of critical file-integrity events** and unauthorized access attempts, with real-time anomaly detection
+
+### 🛒 Scalable E-Commerce API Backend
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+
+- Order workflows, stateful cart management and secure user authentication
+- **30% lower read/write latency** on dynamic product catalogs through data modeling and Django ORM query optimization
+- 📂 Code: [SecureCart](https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform)
+
+<!-- ═════════════════════════ REPOS ═════════════════════════ -->
+## 📂 Open-Source Repositories
+
+<p align="center">
+  <a href="https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=Autonomous-AI-Software-Engineering-Platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="NexusAI" /></a>
+  <a href="https://github.com/Arya-9989/secure-multi-tenant-platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=secure-multi-tenant-platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="Secure multi-tenant platform" /></a>
+  <a href="https://github.com/Arya-9989/secure-cloud-microservices-platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=secure-cloud-microservices-platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="Secure cloud microservices platform" /></a>
+  <a href="https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="SecureCart" /></a>
+</p>
 
 <details>
-<summary><b>📂 More projects & research</b></summary>
+<summary><b>🔬 More projects & research</b></summary>
 <br>
 
 | Project | What it is |
 | :-- | :-- |
-| 🤖 **[NexusAI](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform)** | Cloud-native AI platform with LLM chat, document analysis and Stripe billing (FastAPI · Docker · AWS) |
-| 📈 **[Momentum Live Stock Tracker](https://github.com/Arya-9989/Momentum-Live-Stock-Tracker)** | Real-time global stock dashboard (Streamlit · Plotly · yFinance) |
+| 📈 **[Momentum Live Stock Tracker](https://github.com/Arya-9989/Momentum-Live-Stock-Tracker)** | Real-time global stock and index dashboard (Streamlit · Plotly · yFinance) |
 | 🗄️ **Secure Evidence Archiving & Retrieval System** | Tamper-proof digital forensic evidence storage with encryption and audit trails |
 | 🦠 **Ransomware Detection Tool** | Behavior-based detection of encryption malware using anomaly detection |
-| 🧬 **Quantum-Resistant Cloud Encryption** | Research on post-quantum cryptography for cloud data |
+| 🧬 **Quantum-Resistant Cloud Encryption** | IEEE-style research paper on post-quantum cryptography for cloud data |
+| ❄️ **Cooling Solutions for Data Centers** | IEEE-style research paper |
 
 </details>
 
----
+<!-- ═════════════════════════ EDUCATION ═════════════════════════ -->
+## 🎓 Education & Certification
 
-## 🏆 Highlights
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎓 B.Tech, Cloud Technology & Information Security</h3>
+      <b>Ajeenkya D Y Patil University, Pune</b> · 2022 – 2026<br><br>
+      <sub>Cloud Computing · Network Security · Information Security · Operating Systems · DBMS · Software Engineering · Data Structures & Algorithms</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏅 AWS Certified Cloud Practitioner</h3>
+      <b>Amazon Web Services</b> · Apr 2026 – Apr 2029<br><br>
+      <sub>EC2 · S3 · IAM · VPC networking · security groups · load balancing · cloud deployment best practices</sub>
+    </td>
+  </tr>
+</table>
 
-- 🎖️ **AWS Certified Cloud Practitioner** (April 2026)
-- 📉 **90% less deployment downtime** with scripted zero-downtime releases on AWS EC2
-- ⏱️ **10+ hours a week** of manual reporting automated with Apache Airflow
-- ⚡ **40% faster** database reads on EcoQuest; **30% faster** catalog queries on the e-commerce backend
-- 📝 Authored **IEEE-style research papers** on *Quantum-Resistant Cloud Encryption* and *Cooling Solutions for Data Centers*
-
----
-
-## 📈 GitHub Stats
+<!-- ═════════════════════════ STATS ═════════════════════════ -->
+## 📈 GitHub Activity
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Arya-9989&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arya-9989&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff" alt="Top languages" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Arya-9989&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff" alt="GitHub stats" />
+  <img width="49%" src="https://streak-stats.demolab.com?user=Arya-9989&theme=tokyonight&hide_border=true&background=0d1117&ring=00ffff&fire=00ffff&currStreakLabel=00ffff" alt="GitHub streak" />
 </p>
+
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Arya-9989&theme=tokyonight&hide_border=true&background=0d1117&ring=00ffff&fire=00ffff&currStreakLabel=00ffff" alt="GitHub streak" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Arya-9989/Arya-9989/output/github-snake-dark.svg" />
+    <img src="https://raw.githubusercontent.com/Arya-9989/Arya-9989/output/github-snake.svg" width="100%" alt="Contribution snake animation" />
+  </picture>
 </p>
 
----
-
-## 🌐 Connect With Me
+<!-- ═════════════════════════ CONTACT ═════════════════════════ -->
+## 🤝 Let's Work Together
 
 <p align="center">
-  <a href="mailto:arya.mahindrakar.09@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/Arya-9989"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <!-- Add your LinkedIn: replace YOUR-HANDLE and uncomment
+  I'm looking for <b>DevOps, Cloud, Platform and Security engineering</b> roles.<br>
+  If your team ships to the cloud and cares about doing it securely, I'd love to talk.
+</p>
+
+<p align="center">
+  <a href="mailto:arya.mahindrakar.09@gmail.com"><img src="https://img.shields.io/badge/arya.mahindrakar.09@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://github.com/Arya-9989"><img src="https://img.shields.io/badge/GitHub-Arya--9989-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <!-- Add LinkedIn: replace YOUR-HANDLE and uncomment
   <a href="https://www.linkedin.com/in/YOUR-HANDLE/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   -->
 </p>
 
----
-
 <p align="center">
-  ✨ <b>"Transforming ideas into secure, scalable, and intelligent solutions."</b> ✨
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ffff,50:0077b6,100:0d1117&height=120&section=footer" width="100%" alt="" />
 </p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
-</p>
-
-<!-- 🌟 PROFILE README END -->
