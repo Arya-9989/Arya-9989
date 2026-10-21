@@ -16,7 +16,6 @@
 <p align="center">
   <a href="mailto:arya.mahindrakar.09@gmail.com"><img src="https://img.shields.io/badge/Email_me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://github.com/Arya-9989?tab=repositories"><img src="https://img.shields.io/badge/Browse_my_repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" /></a>
-  <img src="https://komarev.com/ghpvc/?username=Arya-9989&color=00ffff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
 </p>
 
 <!-- ═════════════════════════ IMPACT ═════════════════════════ -->
@@ -173,21 +172,6 @@ motto:       "Secure by design, scalable by default."
     </td>
   </tr>
 </table>
-
-<!-- ═════════════════════════ STATS ═════════════════════════ -->
-## 📈 GitHub Activity
-
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Arya-9989&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff" alt="GitHub stats" />
-  <img width="49%" src="https://streak-stats.demolab.com?user=Arya-9989&theme=tokyonight&hide_border=true&background=0d1117&ring=00ffff&fire=00ffff&currStreakLabel=00ffff" alt="GitHub streak" />
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Arya-9989/Arya-9989/output/github-snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/Arya-9989/Arya-9989/output/github-snake.svg" width="100%" alt="Contribution snake animation" />
-  </picture>
-</p>
 
 <!-- ═════════════════════════ CONTACT ═════════════════════════ -->
 ## 🤝 Let's Work Together
