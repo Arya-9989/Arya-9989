@@ -679,6 +679,7 @@ class Tile:
     alt: str = ""
     ident: str = "t"
     art: object = None         # callable(theme, mode, x, y, w, scale) -> (svg, css, height): custom artwork under the text
+    motif_row: bool = False    # lay the eyebrow out as if a motif sat beside it (aligns with motif tiles)
     _h: dict = field(default_factory=dict)
 
 
@@ -696,10 +697,11 @@ def tile_layout(t: Tile, W, mode, s, pad, th2, theme, H=None, animate=False):
     css = ""
     out = ""
     top = pad
-    if t.motif:
+    if t.motif or t.motif_row:
         mx, my = W - INS - pad - 64, pad - 4
-        m, css = motif(t.motif, mx, my, th2["acc"], th2, animate)
-        out += m
+        if t.motif:
+            m, css = motif(t.motif, mx, my, th2["acc"], th2, animate)
+            out += m
         blocks = t.top(mode, s)
         eb = blocks[0]
         # the eyebrow sits on the motif's centre line; the title clears the motif
@@ -1129,17 +1131,18 @@ def build():
             def a_top(mode, s):
                 if mode == "w":
                     return [Block("How AutoSWE works", 14 * s, 18 * s, 600, "acc"),
-                            Block("Plain-English spec in. Deployable project out.", 24 * s, 29 * s, 600, "fg", gap=10 * s, fam="d"),
+                            Block("Plain-English spec in. Deployable project out.", 24 * s, 29 * s, 600, "fg", fam="d"),
                             Block("Five agents hand the work along. Every generated file is parsed and policy-checked, "
                                   "with an automatic repair pass.", 16.5 * s, 23.5 * s, 400, "fg2", gap=10 * s)]
                 return [Block("How AutoSWE works", floor * s, floor * s * 1.2, 600, "acc"),
-                        Block("Plain-English spec in. Deployable project out.", 28 * s, 33 * s, 600, "fg", gap=9 * s, fam="d"),
+                        Block("Plain-English spec in. Deployable project out.", 28 * s, 33 * s, 600, "fg", fam="d"),
                         Block("Five agents hand the work along. Every generated file is parsed and policy-checked, "
                               "with an automatic repair pass.", floor * s, floor * s * 1.32, 400, "fg2", gap=10 * s)]
             alt2 = ("How AutoSWE works: plain-English spec in, deployable project out. Five agents hand the work along: "
                     "analyst, architect, coder, DevOps and reviewer. Every generated file is parsed and policy-checked, "
                     "with an automatic repair pass.")
-            tiles.append(Tile(a_top, None, accent=REPO_ACCENT["autoswe"], alt=alt2, ident="rflow", art=autoswe_art))
+            tiles.append(Tile(a_top, None, accent=REPO_ACCENT["autoswe"], alt=alt2, ident="rflow", art=autoswe_art,
+                              motif_row=True))
             links.append(f"{GH}/{r['slug']}")
             names.append("autoswe-flow")
     md.append(group("repo", tiles, 420, pad_w=30, pad_n=24, radius=24, links=links, names=names, eq=2, phone=True))
