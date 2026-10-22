@@ -139,6 +139,14 @@
 <!-- ═════════════════════════ PROJECTS ═════════════════════════ -->
 ## 🚀 Featured Projects
 
+### 🤖 AutoSWE: Autonomous AI Software Engineering Platform
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Claude AI](https://img.shields.io/badge/Claude_AI-D97757?style=flat-square&logo=anthropic&logoColor=white) ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+
+- **Five-agent LLM pipeline** (analyst → architect → coder → DevOps → reviewer) turns a plain-English spec into a downloadable project: FastAPI code and tests, Dockerfile, CI workflow, Kubernetes manifests and Terraform
+- Every generated file is **parsed and policy-checked** (paths, secrets, K8s/Docker/CI rules) with an automatic repair pass; generated Terraform and manifests pass `terraform validate` and `kubeconform -strict` in CI
+- Async jobs with persisted progress **streamed live over SSE** to a React dashboard; pluggable providers (Claude + a deterministic offline provider so CI runs without API keys)
+- 📂 Code: [Autonomous-AI-Software-Engineering-Platform](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform)
+
 ### 🎮 EcoQuest Platform
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socketdotio&logoColor=white) ![Claude AI](https://img.shields.io/badge/Claude_AI-D97757?style=flat-square&logo=anthropic&logoColor=white)
 
@@ -161,7 +169,8 @@
 - B2B Django backend with **100% organization-level data isolation** through query-scoped ORM filtering and strict permission classes
 - Declarative **Jenkins CI/CD pipelines** triggered by GitHub webhooks for continuous delivery to staging
 - Bash process-management scripts for seamless service swaps on EC2: **deployment downtime cut by 90%**
-- 📂 Code: [secure-multi-tenant-platform](https://github.com/Arya-9989/secure-multi-tenant-platform) · [secure-cloud-microservices-platform](https://github.com/Arya-9989/secure-cloud-microservices-platform)
+- 📂 Code: [secure-multi-tenant-platform](https://github.com/Arya-9989/secure-multi-tenant-platform): fail-closed tenant isolation, RBAC, expiring invitations and an append-only audit log, with a **228-test suite that attacks every endpoint cross-tenant**
+- 📂 Code: [secure-cloud-microservices-platform](https://github.com/Arya-9989/secure-cloud-microservices-platform): Django auth service issuing JWTs via JWKS + **Java 21 Spring Boot** orders service behind a Traefik gateway, with Prometheus/Grafana, Trivy-scanned images and a 26-test end-to-end suite in CI
 
 ### 🛡️ Infrastructure Observability & SIEM Platform
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) ![Wazuh](https://img.shields.io/badge/Wazuh_SIEM-3B5BDB?style=flat-square&logo=wazuh&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
@@ -174,13 +183,13 @@
 
 - Order workflows, stateful cart management and secure user authentication
 - **30% lower read/write latency** on dynamic product catalogs through data modeling and Django ORM query optimization
-- 📂 Code: [SecureCart](https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform)
+- 📂 Code: [SecureCart](https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform): Django REST + React/TypeScript storefront and admin console with rotating httpOnly refresh tokens and a **row-locked checkout that can't oversell** (proven by a concurrent-buyers test)
 
 <!-- ═════════════════════════ REPOS ═════════════════════════ -->
 ## 📂 Open-Source Repositories
 
 <p align="center">
-  <a href="https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=Autonomous-AI-Software-Engineering-Platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="NexusAI" /></a>
+  <a href="https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=Autonomous-AI-Software-Engineering-Platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="AutoSWE: autonomous AI software engineering platform" /></a>
   <a href="https://github.com/Arya-9989/secure-multi-tenant-platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=secure-multi-tenant-platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="Secure multi-tenant platform" /></a>
   <a href="https://github.com/Arya-9989/secure-cloud-microservices-platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=secure-cloud-microservices-platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="Secure cloud microservices platform" /></a>
   <a href="https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Arya-9989&repo=SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&description_lines_count=2" alt="SecureCart" /></a>
@@ -192,7 +201,7 @@
 
 | Project | What it is |
 | :-- | :-- |
-| 📈 **[Momentum Live Stock Tracker](https://github.com/Arya-9989/Momentum-Live-Stock-Tracker)** | Real-time global stock and index dashboard (Streamlit · Plotly · yFinance) |
+| 📈 **[Momentum Live Stock Tracker](https://github.com/Arya-9989/Momentum-Live-Stock-Tracker)** | Global stocks, indices, FX and crypto dashboard with candlesticks, tested technical indicators (SMA/EMA/RSI/MACD/Bollinger), comparison and watchlist (Streamlit · Plotly · yFinance) |
 | 🗄️ **Secure Evidence Archiving & Retrieval System** | Tamper-proof digital forensic evidence storage with encryption and audit trails |
 | 🦠 **Ransomware Detection Tool** | Behavior-based detection of encryption malware using anomaly detection |
 | 🧬 **Quantum-Resistant Cloud Encryption** | IEEE-style research paper on post-quantum cryptography for cloud data |
