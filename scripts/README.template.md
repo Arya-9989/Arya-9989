@@ -1,7 +1,7 @@
 @@TOP@@
 
 ### AutoSWE: Autonomous AI Software Engineering Platform
-*Python · FastAPI · React · Claude AI · Terraform · Kubernetes*
+*Flagship AI project · Python · FastAPI · React · Claude AI · Terraform · Kubernetes*
 
 - **Five-agent LLM pipeline** (analyst → architect → coder → DevOps → reviewer) turns a plain-English spec into a downloadable project: FastAPI code and tests, Dockerfile, CI workflow, Kubernetes manifests and Terraform
 - Every generated file is **parsed and policy-checked** (paths, secrets, K8s/Docker/CI rules) with an automatic repair pass; generated Terraform and manifests pass `terraform validate` and `kubeconform -strict` in CI
