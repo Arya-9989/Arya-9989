@@ -875,13 +875,13 @@ REPOS = [  # fallback copies; build() refreshes desc and lang from GitHub
     dict(key="autoswe", slug="Autonomous-AI-Software-Engineering-Platform", name="AutoSWE", lang="Python", flagship=True,
          desc="AutoSWE: multi-agent LLM platform (Claude) that turns a plain-English spec into a validated, deployable project: FastAPI code, tests, Dockerfile, CI, Kubernetes and Terraform. Live agent progress UI, offline mode, 150+ tests."),
     dict(key="securecart", slug="SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform", name="SecureCart", lang="TypeScript",
-         desc="Security-focused full-stack e-commerce platform: Django REST + React/TypeScript. Rotating httpOnly refresh tokens, RBAC, oversell-proof transactional checkout, audit log, strict CSP. 252 tests incl. Playwright + axe e2e, Dockerized, CI."),
+         desc="Security-focused full-stack e-commerce platform: Django REST + React/TypeScript. Rotating httpOnly refresh tokens with reuse detection, RBAC, race-safe idempotent checkout, audit log, strict CSP. 329 tests incl. Playwright + axe e2e, Dockerized, CI."),
     dict(key="microservices", slug="secure-cloud-microservices-platform", name="Secure Cloud Microservices Platform", lang="Python",
          desc="Secure cloud-native microservices: Python (Django) auth service issuing JWTs via JWKS + Java 21 Spring Boot orders service, behind a Traefik gateway, with Prometheus/Grafana, Kubernetes manifests, GitHub Actions + Jenkins CI/CD, Trivy scans and a 28-test e2e suite."),
     dict(key="multitenant", slug="secure-multi-tenant-platform", name="Secure Multi-Tenant Platform", lang="Python",
-         desc="Multi-tenant SaaS backend (Django REST Framework): fail-closed tenant isolation, RBAC, expiring invitations, hardened JWT, strict CSP and an append-only audit log, with a 247-test suite that proves cross-tenant isolation."),
+         desc="Multi-tenant SaaS backend (Django REST Framework): fail-closed tenant isolation, RBAC, expiring invitations, hardened JWT, strict CSP and an append-only audit log, with a 274-test suite that proves cross-tenant isolation."),
     dict(key="momentum", slug="Momentum-Live-Stock-Tracker", name="Momentum Live Stock Tracker", lang="Python",
-         desc="Apple Stocks-style Streamlit dashboard for global stocks, indices, FX and crypto: area and candlestick charts, tested technical indicators (SMA/EMA/RSI/MACD/Bollinger), comparison and a watchlist rail. 250 tests, 95% coverage, typed, Dockerized."),
+         desc="Streamlit dashboard for global stocks, indices, FX and crypto: area and candlestick charts, tested technical indicators (SMA/EMA/RSI/MACD/Bollinger), comparison and a watchlist rail. 250 tests, 95% coverage, typed, Dockerized."),
 ]
 
 # AutoSWE's five agents, as named in its pipeline (src/autoswe/pipeline/agents.py)
