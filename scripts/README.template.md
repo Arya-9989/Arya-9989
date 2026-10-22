@@ -31,7 +31,7 @@
 - Declarative **Jenkins CI/CD pipelines** triggered by GitHub webhooks for continuous delivery to staging
 - Bash process-management scripts for seamless service swaps on EC2: **deployment downtime cut by 90%**
 - Code: [secure-multi-tenant-platform](https://github.com/Arya-9989/secure-multi-tenant-platform): fail-closed tenant isolation, RBAC, expiring invitations and an append-only audit log, with a **274-test suite that attacks every endpoint cross-tenant**
-- Code: [secure-cloud-microservices-platform](https://github.com/Arya-9989/secure-cloud-microservices-platform): Django auth service issuing JWTs via JWKS + **Java 21 Spring Boot** orders service behind a Traefik gateway, with Prometheus/Grafana, Trivy-scanned images and a 28-test end-to-end suite in CI
+- Code: [secure-cloud-microservices-platform](https://github.com/Arya-9989/secure-cloud-microservices-platform): Django auth service issuing JWTs via JWKS + **Java 21 Spring Boot** orders service behind a Traefik gateway, with Prometheus/Grafana, Trivy-scanned images and a 31-test end-to-end suite in CI
 
 ### Infrastructure Observability & SIEM Platform
 *Grafana · Wazuh SIEM · Linux*
