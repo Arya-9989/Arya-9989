@@ -64,8 +64,8 @@
 @@BOTTOM@@
 
 <p align="center">
-  I'm looking for <b>DevOps, Cloud, Platform and Security engineering</b> roles.<br>
-  If your team ships to the cloud and cares about doing it securely, I'd love to talk.
+  I'm looking for <b>AI engineering</b> roles: LLM agents, evals, and the cloud and security work that gets them to production.<br>
+  If your team is shipping AI to real users and cares about doing it securely, I'd love to talk.
 </p>
 
 @@CTA@@
@@ -73,7 +73,5 @@
 <p align="center">
   <a href="mailto:arya.mahindrakar.09@gmail.com">arya.mahindrakar.09@gmail.com</a><br>
   <a href="https://github.com/Arya-9989">github.com/Arya-9989</a>
-  <!-- Add LinkedIn: replace YOUR-HANDLE and uncomment
-  <br><a href="https://www.linkedin.com/in/YOUR-HANDLE/">LinkedIn</a>
-  -->
+  <br><a href="https://www.linkedin.com/in/aryamahindrakar-00x9989/">linkedin.com/in/aryamahindrakar-00x9989</a>
 </p>

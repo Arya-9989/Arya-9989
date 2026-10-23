@@ -108,8 +108,8 @@
 <h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-contact-dark.svg"><img src="assets/h-contact-light.svg" width="846" alt="Let’s work together."></picture></h2>
 
 <p align="center">
-  I'm looking for <b>DevOps, Cloud, Platform and Security engineering</b> roles.<br>
-  If your team ships to the cloud and cares about doing it securely, I'd love to talk.
+  I'm looking for <b>AI engineering</b> roles: LLM agents, evals, and the cloud and security work that gets them to production.<br>
+  If your team is shipping AI to real users and cares about doing it securely, I'd love to talk.
 </p>
 
 <p align="center"><a href="mailto:arya.mahindrakar.09@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-email-dark.svg"><img src="assets/cta-email-light.svg" width="123" alt="Email me"></picture></a><a href="https://github.com/Arya-9989?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-repos-dark.svg"><img src="assets/cta-repos-light.svg" width="190" alt="Browse my repos"></picture></a></p>
@@ -117,7 +117,5 @@
 <p align="center">
   <a href="mailto:arya.mahindrakar.09@gmail.com">arya.mahindrakar.09@gmail.com</a><br>
   <a href="https://github.com/Arya-9989">github.com/Arya-9989</a>
-  <!-- Add LinkedIn: replace YOUR-HANDLE and uncomment
-  <br><a href="https://www.linkedin.com/in/YOUR-HANDLE/">LinkedIn</a>
-  -->
+  <br><a href="https://www.linkedin.com/in/aryamahindrakar-00x9989/">linkedin.com/in/aryamahindrakar-00x9989</a>
 </p>
