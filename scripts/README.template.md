@@ -73,5 +73,5 @@
 <p align="center">
   <a href="mailto:arya.mahindrakar.09@gmail.com">arya.mahindrakar.09@gmail.com</a><br>
   <a href="https://github.com/Arya-9989">github.com/Arya-9989</a>
-  <br><a href="https://www.linkedin.com/in/aryamahindrakar-00x9989/">linkedin.com/in/aryamahindrakar-00x9989</a>
+  <br><a href="https://www.linkedin.com/in/arya-mahindrakar/">linkedin.com/in/arya-mahindrakar</a>
 </p>
