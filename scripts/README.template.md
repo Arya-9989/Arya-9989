@@ -1,77 +1,69 @@
+@@HERO@@
+
+## [AutoSWE](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform)
+
+My flagship public AI project: **a plain-English spec becomes a tested, deployable project** in Python, TypeScript or Go.
+
+- **Agents with guardrails.** Five stages, typed artifacts, file policy checks, sandboxed tests and a bounded repair loop.
+- **Quality you can inspect.** [Eval regression gates in CI](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform/blob/main/.github/workflows/ci.yml), plus a deterministic offline provider for runs without API keys.
+- **Usage you can account for.** Per-user token budgets, cost reporting and OpenTelemetry traces across agent stages and model calls.
+
 @@TOP@@
 
-### AutoSWE: Autonomous AI Software Engineering Platform
-*Flagship AI project · Python · FastAPI · React · Claude AI · OpenTelemetry · Kubernetes*
+Explore the [architecture](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform#architecture) and inspect the [tests](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform/tree/main/tests).
 
-- **Five-agent LLM pipeline** (analyst → architect → coder → DevOps → reviewer) turns a plain-English spec into a downloadable project in **Python, TypeScript or Go**: code and tests, migrations, Dockerfile, CI workflow, Kubernetes manifests and Terraform
-- Generated test suites run in a **locked-down sandbox** (no network, read-only, capped memory and processes) and failures feed a bounded **repair loop**; every file is also parsed and policy-checked
-- **Eval harness with regression gates in CI**, per-user **token budgets** with cost reporting, and **OpenTelemetry traces** of every agent stage and model call
-- Async jobs with persisted progress **streamed live over SSE** to a React dashboard; pluggable providers (Claude + a deterministic offline provider so CI runs without API keys)
-- Code: [Autonomous-AI-Software-Engineering-Platform](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform)
+AutoSWE generates infrastructure code; it does not deploy projects to AWS automatically.
 
-### EcoQuest Platform
-*Python · Django · PostgreSQL · Django templates · Bootstrap · JavaScript · Docker · GitHub Actions*
+## Beyond the flagship
 
-- **Gamified environmental learning with teacher-scoped classrooms**: student, teacher and admin portals, approval-gated authoring, and class-scoped analytics and CSV exports backed by cross-teacher isolation tests
-- **Server-enforced quiz integrity** through randomized question-bank draws, persisted question and choice order, deadline checks and idempotent grading that makes replayed submissions a no-op
-- **A transaction-protected rewards economy** with XP, coins, streaks, badges, daily challenges and leaderboards; improvement-only quiz XP prevents retake farming, while row locks protect against duplicate rewards and shop double-spending, covered by PostgreSQL concurrency tests
-- **Retryable background email** through a database outbox with idempotent enqueueing, worker leases, crash recovery and exponential backoff; SMTP integration and concurrent-worker tests are wired into CI
-- **Security and deployment checks built into CI**: nonce-based CSP and secure HTTPS defaults, PostgreSQL tests, lint and type checks, and a non-root Docker image with container health and static-asset smoke tests
+Two private projects deepen the agent work:
 
-### High-Throughput Analytics Engine
-*Go · Docker · PostgreSQL · Apache Airflow*
+- **AI-Agent (private):** a tool-calling loop built from first principles; hybrid RAG with local embeddings and keyword fallback; source-citation and faithfulness checks; context trimming and token/cost tracking.
+- **mcp-agent (private):** MCP tool servers; checkpointed LangGraph execution with tool approvals; a manager–worker team; hybrid retrieval and reranking; persistent memory, structured traces and scheduled answer evals.
 
-- Go microservice ingesting **thousands of tracking events per minute with zero data loss**, using PostgreSQL connection pooling
-- Fully containerized with Docker, which **eliminated environment drift** for new developers
-- Airflow DAGs turn raw logs into query-optimized data marts, **saving 10+ hours of manual reporting every week**
-
-### Multi-Tenant Microservices Architecture
-*Python · Django REST · AWS EC2 · Jenkins · Docker*
-
-- B2B Django backend with **100% organization-level data isolation** through query-scoped ORM filtering and strict permission classes
-- Declarative **Jenkins CI/CD pipelines** triggered by GitHub webhooks for continuous delivery to staging
-- Bash process-management scripts for seamless service swaps on EC2: **deployment downtime cut by 90%**
-- Code: [secure-multi-tenant-platform](https://github.com/Arya-9989/secure-multi-tenant-platform): fail-closed tenant isolation enforced twice (ORM scoping and **PostgreSQL row-level security**), MFA and OIDC SSO, and a hash-chained audit log, with a **663-test suite that attacks every endpoint cross-tenant**
-- Code: [secure-cloud-microservices-platform](https://github.com/Arya-9989/secure-cloud-microservices-platform): Django auth service issuing JWTs via JWKS + **Java 21 Spring Boot** orders service behind a Traefik gateway, with OpenTelemetry tracing, DPoP service tokens, **cosign-signed images verified at admission**, k6 latency SLOs and a 55-test end-to-end suite in CI
-
-### Infrastructure Observability & SIEM Platform
-*Grafana · Wazuh SIEM · Linux*
-
-- Centralized **Grafana monitoring with threshold-based alerting** across virtualized Linux hosts
-- **Wazuh SIEM auditing 100% of critical file-integrity events** and unauthorized access attempts, with real-time anomaly detection
-
-### Scalable E-Commerce API Backend
-*Django · Python · SQL*
-
-- Order workflows, stateful cart management and secure user authentication
-- **30% lower read/write latency** on dynamic product catalogs through data modeling and Django ORM query optimization
-- Code: [SecureCart](https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform): Django REST + React/TypeScript storefront and admin console with rotating httpOnly refresh tokens, signature-verified **Stripe webhooks** and a **row-locked checkout that can't oversell** (proven by a concurrent-buyers test)
-
-<details>
-<summary><b>More projects & research</b></summary>
-<br>
-
-| Project | What it is |
-| :-- | :-- |
-| **[Momentum Live Stock Tracker](https://github.com/Arya-9989/Momentum-Live-Stock-Tracker)** | Global stocks, indices, FX and crypto dashboard with tested technical indicators (SMA/EMA/RSI/MACD/Bollinger), price alerts, a FIFO portfolio and saved watchlists (Streamlit · Lightweight Charts · yFinance) |
-| **Secure Evidence Archiving & Retrieval System** | Tamper-proof digital forensic evidence storage with encryption and audit trails |
-| **Ransomware Detection Tool** | Behavior-based detection of encryption malware using anomaly detection |
-| **Quantum-Resistant Cloud Encryption** | IEEE-style research paper on post-quantum cryptography for cloud data |
-| **Cooling Solutions for Data Centers** | IEEE-style research paper |
-
-</details>
+## How I build AI systems
 
 @@BOTTOM@@
 
-<p align="center">
-  I'm looking for <b>AI engineering</b> roles: LLM agents, evals, and the cloud and security work that gets them to production.<br>
-  If your team is shipping AI to real users and cares about doing it securely, I'd love to talk.
-</p>
+## Cloud and security behind the agents
+
+These public projects show the backend, deployment and security work I bring to AI systems.
+
+@@REPOS@@
+
+### Infrastructure Observability & SIEM Platform
+
+Hands-on project experience with Grafana, Wazuh SIEM and Linux:
+
+- Centralized **Grafana monitoring with threshold-based alerting** across virtualized Linux hosts
+- **Wazuh SIEM file-integrity and unauthorized-access monitoring**, with real-time anomaly detection
+
+## Education & Certification
+
+**B.Tech, Cloud Technology & Information Security**<br>
+Ajeenkya D Y Patil University, Pune · 2022 – 2026<br>
+Cloud Computing · Network Security · Information Security · Operating Systems · DBMS · Software Engineering · Data Structures & Algorithms
+
+**AWS Certified Cloud Practitioner**<br>
+Amazon Web Services · Apr 2026 – Apr 2029<br>
+EC2 · S3 · IAM · VPC networking · security groups · load balancing · cloud deployment best practices
+
+**Location:** Pune, India
+
+## Research
+
+- **Quantum-Resistant Cloud Encryption** — IEEE-style research paper on post-quantum cryptography for cloud data
+- **Cooling Solutions for Data Centers** — IEEE-style research paper
+
+<details>
+<summary>Stack</summary>
+
+@@STACK@@
+
+</details>
+
+## Let’s work together
+
+I'm looking for AI engineering roles building agents, MCP integrations and RAG systems, with evals, guardrails and the cloud infrastructure to run them.
 
 @@CTA@@
-
-<p align="center">
-  <a href="mailto:arya.mahindrakar.09@gmail.com">arya.mahindrakar.09@gmail.com</a><br>
-  <a href="https://github.com/Arya-9989">github.com/Arya-9989</a>
-  <br><a href="https://www.linkedin.com/in/arya-mahindrakar/">linkedin.com/in/arya-mahindrakar</a>
-</p>

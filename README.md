@@ -2,120 +2,91 @@
 
 <p align="center"><a href="mailto:arya.mahindrakar.09@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-email-dark.svg"><img src="assets/cta-email-light.svg" width="123" alt="Email me"></picture></a><a href="https://github.com/Arya-9989?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-repos-dark.svg"><img src="assets/cta-repos-light.svg" width="190" alt="Browse my repos"></picture></a></p>
 
-<!-- About -->
+## [AutoSWE](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform)
 
-<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-about-dark.svg"><img src="assets/h-about-light.svg" width="846" alt="About me: I turn code into reliable, secure production systems."></picture></h2>
+My flagship public AI project: **a plain-English spec becomes a tested, deployable project** in Python, TypeScript or Go.
 
-<p align="center">I work across the whole path to production: I write the backend, build the pipeline that ships it, run it on AWS, and set up the monitoring and security that keep it healthy. Then I measure the result and make it faster.</p>
+- **Agents with guardrails.** Five stages, typed artifacts, file policy checks, sandboxed tests and a bounded repair loop.
+- **Quality you can inspect.** [Eval regression gates in CI](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform/blob/main/.github/workflows/ci.yml), plus a deterministic offline provider for runs without API keys.
+- **Usage you can account for.** Per-user token budgets, cost reporting and OpenTelemetry traces across agent stages and model calls.
 
-<h3 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-what-dark.svg"><img src="assets/h-what-light.svg" width="846" alt="What I do: AI Integrations, DevOps, Cloud, Security."></picture></h3>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/autoswe-pipeline-dark.svg"><img src="assets/autoswe-pipeline-light.svg" width="420" alt="AutoSWE pipeline: Analyst, Architect, Coder, DevOps, Reviewer."></picture></p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-1-dark.svg"><img src="assets/cap-1-light.svg" width="420" alt="Extend with AI: LLM-powered project generation in Python, TypeScript and Go, plus GenAI and RAG fundamentals. Anthropic API, AutoSWE."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-2-dark.svg"><img src="assets/cap-2-light.svg" width="420" alt="Multi-agent orchestration: A five-agent LLM pipeline (analyst to architect to coder to DevOps to reviewer) whose generated tests run in a locked-down sandbox and feed a bounded repair loop. Claude, FastAPI, AutoSWE."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-3-dark.svg"><img src="assets/cap-3-light.svg" width="420" alt="Tool calling, MCP &amp; RAG: Tool-calling agents, MCP tools, embeddings and semantic search, and persistent agent memory. MCP, Ollama, OpenAI-compatible APIs."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-4-dark.svg"><img src="assets/cap-4-light.svg" width="420" alt="LLM evals &amp; testing: An eval harness with regression gates in CI across 3 stacks, scheduled LLM answer evals, and offline providers that make agents testable without API keys. pytest, GitHub Actions."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-5-dark.svg"><img src="assets/cap-5-light.svg" width="420" alt="Guardrails: Policy checks on every generated file, sandboxed test execution, and per-user token budgets. Claude AI, AutoSWE."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-6-dark.svg"><img src="assets/cap-6-light.svg" width="420" alt="Secure &amp; Observe: JWT, RBAC and IAM policies, OpenTelemetry traces of every agent step, Grafana alerting and Wazuh SIEM. OpenTelemetry, Grafana, Wazuh."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-7-dark.svg"><img src="assets/cap-7-light.svg" width="420" alt="Build: Full-stack apps and REST APIs, plus Django templates with progressive JavaScript enhancement in EcoQuest. Django, Node.js, React."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-8-dark.svg"><img src="assets/cap-8-light.svg" width="420" alt="Ship: CI/CD pipelines and zero-downtime releases that cut deploy downtime from 20 min to under 2. Jenkins, GitHub Actions, Docker."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-9-dark.svg"><img src="assets/cap-9-light.svg" width="420" alt="Run: AWS EC2, S3, IAM, VPC and RDS, with Linux process management and Bash automation. AWS, Linux, Bash."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cap-10-dark.svg"><img src="assets/cap-10-light.svg" width="420" alt="Automate: Airflow ETL pipelines and Go ingestion services that save 10+ hours a week. PostgreSQL, MongoDB, Go."></picture></p>
+Explore the [architecture](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform#architecture) and inspect the [tests](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform/tree/main/tests).
 
-<!-- Impact -->
+AutoSWE generates infrastructure code; it does not deploy projects to AWS automatically.
 
-<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-impact-dark.svg"><img src="assets/h-impact-light.svg" width="846" alt="Impact at a glance."></picture></h2>
+## Beyond the flagship
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/impact-1-dark.svg"><img src="assets/impact-1-light.svg" width="420" alt="Uptime at $0 hosting cost: 99.9%, EcoQuest. Deployment downtime: down 90%, 20 min to under 2 min on EC2."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/impact-2-dark.svg"><img src="assets/impact-2-light.svg" width="420" alt="Database read latency: down 40%, MongoDB indexing + caching. Saved every week: 10+ hrs, Airflow ETL automation."></picture></p>
+Two private projects deepen the agent work:
 
-<!-- Tech stack -->
+- **AI-Agent (private):** a tool-calling loop built from first principles; hybrid RAG with local embeddings and keyword fallback; source-citation and faithfulness checks; context trimming and token/cost tracking.
+- **mcp-agent (private):** MCP tool servers; checkpointed LangGraph execution with tool approvals; a manager–worker team; hybrid retrieval and reranking; persistent memory, structured traces and scheduled answer evals.
 
-<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-stack-dark.svg"><img src="assets/h-stack-light.svg" width="846" alt="Tech stack."></picture></h2>
+## How I build AI systems
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-1-dark.svg"><img src="assets/stack-1-light.svg" width="280" alt="AI agents &amp; LLMs: Multi-agent pipelines, MCP, tool calling; Anthropic &amp; OpenAI-compatible APIs, Ollama, embeddings &amp; semantic search, agent memory, LLM evals."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-2-dark.svg"><img src="assets/stack-2-light.svg" width="280" alt="AI / ML: Claude AI, Generative AI, RAG; Supervised &amp; unsupervised learning, model evaluation metrics."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-3-dark.svg"><img src="assets/stack-3-light.svg" width="280" alt="Languages: Python, Java, JavaScript, TypeScript, Go, Bash."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-4-dark.svg"><img src="assets/stack-4-light.svg" width="280" alt="Backend: Django, Node.js, Express, FastAPI, Spring Boot; Django REST Framework, RESTful APIs, Django sessions, SQLAlchemy, Flyway, OpenAPI."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-5-dark.svg"><img src="assets/stack-5-light.svg" width="280" alt="Frontend: React, TypeScript, Tailwind, HTML, CSS; React 19, Zustand, Progressive Web Apps, Vite, TanStack Query, React Hook Form + Zod, Django templates, Bootstrap."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-6-dark.svg"><img src="assets/stack-6-light.svg" width="280" alt="Cloud &amp; DevOps: AWS, Docker, Jenkins, GitHub Actions, Linux, Git, GitHub; AWS EC2, S3, IAM, VPC, RDS, Linux process management."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-7-dark.svg"><img src="assets/stack-7-light.svg" width="280" alt="Platform &amp; IaC: Kubernetes, Terraform, Traefik, Nginx; Docker Compose, Kustomize, network policies, gunicorn."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-8-dark.svg"><img src="assets/stack-8-light.svg" width="280" alt="Data &amp; Orchestration: PostgreSQL, MongoDB, Apache Airflow, Redis, SQLite; ETL pipelines, MongoDB Atlas, Hadoop / Spark (exposure), Streamlit, Plotly, pandas, NumPy."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-9-dark.svg"><img src="assets/stack-9-light.svg" width="280" alt="Security &amp; Observability: Grafana, Wazuh SIEM, Prometheus; JWT auth, RBAC, rate limiting, Helmet, CORS, IAM policies, OAuth2 / JWKS, Argon2, CSP, Trivy, pip-audit."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-10-dark.svg"><img src="assets/stack-10-light.svg" width="280" alt="Testing &amp; Quality: pytest, Vitest, Playwright, JUnit 5, Testcontainers; ruff, mypy (strict), ESLint, Prettier, axe accessibility checks."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-11-dark.svg"><img src="assets/stack-11-light.svg" width="280" alt="Currently exploring: Machine Learning, Computer Vision and Generative AI (RAG)."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-12-dark.svg"><img src="assets/stack-12-light.svg" width="280" alt="Ask me about: CI/CD pipelines, Django &amp; Node.js backends, AWS, SIEM monitoring."></picture></p>
+- **Orchestrate.** Typed agent stages, MCP tools and checkpointed execution with explicit tool approvals.
+- **Retrieve.** Hybrid RAG, reranking, source citations and persistent memory with update and deletion.
+- **Evaluate.** Regression gates, answer faithfulness checks and offline providers for repeatable tests.
+- **Constrain.** Schema-validated tool calls, isolated code execution and bounded agent and repair loops.
+- **Account.** Token budgets, cost reports and context trimming; traces connect model and tool calls.
+- **Ship.** FastAPI services, persisted jobs, live SSE progress, Docker, CI and Kubernetes manifests.
 
-<!-- Open-source repositories -->
+## Cloud and security behind the agents
 
-<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-repos-dark.svg"><img src="assets/h-repos-light.svg" width="846" alt="Open-source repositories."></picture></h2>
+These public projects show the backend, deployment and security work I bring to AI systems.
 
-<p align="center"><a href="https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-autoswe-dark.svg"><img src="assets/repo-autoswe-light.svg" width="420" alt="AutoSWE, Python repository on GitHub: multi-agent LLM platform (Claude) that turns a plain-English spec into a tested, deployable project in Python, TypeScript or Go. Generated tests run in a locked-down sandbox with a repair loop; eval regression gate in CI; token budgets; OpenTelemetry agent tracing; KEDA workers. 570+ tests."></picture></a><a href="https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-autoswe-flow-dark.svg"><img src="assets/repo-autoswe-flow-light.svg" width="420" alt="How AutoSWE works: plain-English spec in, deployable project out. Five agents hand the work along: analyst, architect, coder, DevOps and reviewer. Every generated file is parsed and policy-checked, with an automatic repair pass."></picture></a><a href="https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-securecart-dark.svg"><img src="assets/repo-securecart-light.svg" width="420" alt="SecureCart, Python repository on GitHub: Security-focused full-stack e-commerce: Django REST + React/TypeScript. Rotating refresh tokens with reuse detection and session epochs, email verification, Stripe webhooks, Redis rate limits, validated image uploads, invoices, strict CSP, Trivy-gated images, Kubernetes with TLS. 675 tests incl. Playwright + axe e2e."></picture></a><a href="https://github.com/Arya-9989/secure-cloud-microservices-platform"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-microservices-dark.svg"><img src="assets/repo-microservices-light.svg" width="420" alt="Secure Cloud Microservices Platform, Python repository on GitHub: Secure cloud-native microservices: Django auth issuing RS256 JWTs (Vault-held keys, rotation, DPoP service tokens) + Java 21 Spring Boot orders (idempotency keys), Traefik, OpenTelemetry tracing, Prometheus/Alertmanager, k6 SLOs in CI, cosign-signed images with Kyverno admission, Kustomize/Helm/Argo CD. 55-test e2e."></picture></a><a href="https://github.com/Arya-9989/secure-multi-tenant-platform"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-multitenant-dark.svg"><img src="assets/repo-multitenant-light.svg" width="420" alt="Secure Multi-Tenant Platform, Python repository on GitHub: Multi-tenant SaaS backend (Django REST Framework): app-level plus PostgreSQL row-level security isolation, RBAC, MFA (TOTP/WebAuthn) and per-org OIDC SSO, refresh-token families, scoped API keys, hash-chained audit log with SIEM streaming, OpenTelemetry. 663 tests that prove cross-tenant isolation."></picture></a><a href="https://github.com/Arya-9989/Momentum-Live-Stock-Tracker"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-momentum-dark.svg"><img src="assets/repo-momentum-light.svg" width="420" alt="Momentum Live Stock Tracker, Python repository on GitHub: Streamlit market dashboard: TradingView Lightweight Charts, tested indicators (SMA/EMA/RSI/MACD/Bollinger), saved watchlists, price and indicator alerts (in-app, email, signed webhooks), FIFO portfolio P&amp;L, fundamentals, provider fallback. 814 tests, 96% coverage, Dockerized."></picture></a></p>
+- [SecureCart](https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform): Django REST + React commerce with rotating refresh tokens, signed Stripe webhooks and row-locked checkout tested against concurrent buyers.
 
-<!-- Featured projects -->
+- [Secure Cloud Microservices](https://github.com/Arya-9989/secure-cloud-microservices-platform): Django + Java Spring Boot services with JWT/JWKS, OpenTelemetry, signed container images and Kubernetes admission policies.
 
-<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-projects-dark.svg"><img src="assets/h-projects-light.svg" width="846" alt="Featured projects."></picture></h2>
+- [Secure Multi-Tenant Platform](https://github.com/Arya-9989/secure-multi-tenant-platform): Django tenant isolation enforced by ORM scoping and PostgreSQL row-level security, with cross-tenant attack tests and a hash-chained audit log.
 
-### AutoSWE: Autonomous AI Software Engineering Platform
-*Flagship AI project · Python · FastAPI · React · Claude AI · OpenTelemetry · Kubernetes*
+- [EcoQuest](https://github.com/Arya-9989/EcoQuest): Django learning platform with teacher-scoped classrooms, replay-safe quiz grading, transaction-protected rewards and a retryable email outbox.
 
-- **Five-agent LLM pipeline** (analyst → architect → coder → DevOps → reviewer) turns a plain-English spec into a downloadable project in **Python, TypeScript or Go**: code and tests, migrations, Dockerfile, CI workflow, Kubernetes manifests and Terraform
-- Generated test suites run in a **locked-down sandbox** (no network, read-only, capped memory and processes) and failures feed a bounded **repair loop**; every file is also parsed and policy-checked
-- **Eval harness with regression gates in CI**, per-user **token budgets** with cost reporting, and **OpenTelemetry traces** of every agent stage and model call
-- Async jobs with persisted progress **streamed live over SSE** to a React dashboard; pluggable providers (Claude + a deterministic offline provider so CI runs without API keys)
-- Code: [Autonomous-AI-Software-Engineering-Platform](https://github.com/Arya-9989/Autonomous-AI-Software-Engineering-Platform)
-
-### EcoQuest Platform
-*Python · Django · PostgreSQL · Django templates · Bootstrap · JavaScript · Docker · GitHub Actions*
-
-- **Gamified environmental learning with teacher-scoped classrooms**: student, teacher and admin portals, approval-gated authoring, and class-scoped analytics and CSV exports backed by cross-teacher isolation tests
-- **Server-enforced quiz integrity** through randomized question-bank draws, persisted question and choice order, deadline checks and idempotent grading that makes replayed submissions a no-op
-- **A transaction-protected rewards economy** with XP, coins, streaks, badges, daily challenges and leaderboards; improvement-only quiz XP prevents retake farming, while row locks protect against duplicate rewards and shop double-spending, covered by PostgreSQL concurrency tests
-- **Retryable background email** through a database outbox with idempotent enqueueing, worker leases, crash recovery and exponential backoff; SMTP integration and concurrent-worker tests are wired into CI
-- **Security and deployment checks built into CI**: nonce-based CSP and secure HTTPS defaults, PostgreSQL tests, lint and type checks, and a non-root Docker image with container health and static-asset smoke tests
-
-### High-Throughput Analytics Engine
-*Go · Docker · PostgreSQL · Apache Airflow*
-
-- Go microservice ingesting **thousands of tracking events per minute with zero data loss**, using PostgreSQL connection pooling
-- Fully containerized with Docker, which **eliminated environment drift** for new developers
-- Airflow DAGs turn raw logs into query-optimized data marts, **saving 10+ hours of manual reporting every week**
-
-### Multi-Tenant Microservices Architecture
-*Python · Django REST · AWS EC2 · Jenkins · Docker*
-
-- B2B Django backend with **100% organization-level data isolation** through query-scoped ORM filtering and strict permission classes
-- Declarative **Jenkins CI/CD pipelines** triggered by GitHub webhooks for continuous delivery to staging
-- Bash process-management scripts for seamless service swaps on EC2: **deployment downtime cut by 90%**
-- Code: [secure-multi-tenant-platform](https://github.com/Arya-9989/secure-multi-tenant-platform): fail-closed tenant isolation enforced twice (ORM scoping and **PostgreSQL row-level security**), MFA and OIDC SSO, and a hash-chained audit log, with a **663-test suite that attacks every endpoint cross-tenant**
-- Code: [secure-cloud-microservices-platform](https://github.com/Arya-9989/secure-cloud-microservices-platform): Django auth service issuing JWTs via JWKS + **Java 21 Spring Boot** orders service behind a Traefik gateway, with OpenTelemetry tracing, DPoP service tokens, **cosign-signed images verified at admission**, k6 latency SLOs and a 55-test end-to-end suite in CI
+- [Momentum](https://github.com/Arya-9989/Momentum-Live-Stock-Tracker): Typed Streamlit market dashboard with tested indicators, saved watchlists, price alerts and FIFO portfolio accounting.
 
 ### Infrastructure Observability & SIEM Platform
-*Grafana · Wazuh SIEM · Linux*
+
+Hands-on project experience with Grafana, Wazuh SIEM and Linux:
 
 - Centralized **Grafana monitoring with threshold-based alerting** across virtualized Linux hosts
-- **Wazuh SIEM auditing 100% of critical file-integrity events** and unauthorized access attempts, with real-time anomaly detection
+- **Wazuh SIEM file-integrity and unauthorized-access monitoring**, with real-time anomaly detection
 
-### Scalable E-Commerce API Backend
-*Django · Python · SQL*
+## Education & Certification
 
-- Order workflows, stateful cart management and secure user authentication
-- **30% lower read/write latency** on dynamic product catalogs through data modeling and Django ORM query optimization
-- Code: [SecureCart](https://github.com/Arya-9989/SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform): Django REST + React/TypeScript storefront and admin console with rotating httpOnly refresh tokens, signature-verified **Stripe webhooks** and a **row-locked checkout that can't oversell** (proven by a concurrent-buyers test)
+**B.Tech, Cloud Technology & Information Security**<br>
+Ajeenkya D Y Patil University, Pune · 2022 – 2026<br>
+Cloud Computing · Network Security · Information Security · Operating Systems · DBMS · Software Engineering · Data Structures & Algorithms
+
+**AWS Certified Cloud Practitioner**<br>
+Amazon Web Services · Apr 2026 – Apr 2029<br>
+EC2 · S3 · IAM · VPC networking · security groups · load balancing · cloud deployment best practices
+
+**Location:** Pune, India
+
+## Research
+
+- **Quantum-Resistant Cloud Encryption** — IEEE-style research paper on post-quantum cryptography for cloud data
+- **Cooling Solutions for Data Centers** — IEEE-style research paper
 
 <details>
-<summary><b>More projects & research</b></summary>
-<br>
+<summary>Stack</summary>
 
-| Project | What it is |
-| :-- | :-- |
-| **[Momentum Live Stock Tracker](https://github.com/Arya-9989/Momentum-Live-Stock-Tracker)** | Global stocks, indices, FX and crypto dashboard with tested technical indicators (SMA/EMA/RSI/MACD/Bollinger), price alerts, a FIFO portfolio and saved watchlists (Streamlit · Lightweight Charts · yFinance) |
-| **Secure Evidence Archiving & Retrieval System** | Tamper-proof digital forensic evidence storage with encryption and audit trails |
-| **Ransomware Detection Tool** | Behavior-based detection of encryption malware using anomaly detection |
-| **Quantum-Resistant Cloud Encryption** | IEEE-style research paper on post-quantum cryptography for cloud data |
-| **Cooling Solutions for Data Centers** | IEEE-style research paper |
+**Agents & retrieval:** Python · FastAPI · MCP · LangGraph · OpenAI-compatible APIs · Ollama · RAG
+
+**Quality & observability:** pytest · Playwright · OpenTelemetry · Prometheus · Grafana · Wazuh SIEM
+
+**Cloud & delivery:** Docker · Kubernetes · Terraform · GitHub Actions · Jenkins
+
+**Backend & data:** Django REST Framework · Spring Boot · PostgreSQL · Redis
+
+**Interfaces:** React · TypeScript · Streamlit
 
 </details>
 
-<!-- Education -->
+## Let’s work together
 
-<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-edu-dark.svg"><img src="assets/h-edu-light.svg" width="846" alt="Education &amp; certification."></picture></h2>
+I'm looking for AI engineering roles building agents, MCP integrations and RAG systems, with evals, guardrails and the cloud infrastructure to run them.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/edu-degree-dark.svg"><img src="assets/edu-degree-light.svg" width="420" alt="Education: B.Tech, Cloud Technology &amp; Information Security. Ajeenkya D Y Patil University, Pune, 2022 to 2026. Cloud Computing, Network Security, Information Security, Operating Systems, DBMS, Software Engineering, Data Structures &amp; Algorithms."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/edu-aws-dark.svg"><img src="assets/edu-aws-light.svg" width="420" alt="Certification: AWS Certified Cloud Practitioner. Amazon Web Services, Apr 2026 to Apr 2029. EC2, S3, IAM, VPC networking, security groups, load balancing, cloud deployment best practices."></picture></p>
-
-<!-- Contact -->
-
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-motto-dark.svg"><img src="assets/h-motto-light.svg" width="846" alt="Motto: Secure by design, scalable by default."></picture></p>
-
-<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-contact-dark.svg"><img src="assets/h-contact-light.svg" width="846" alt="Let’s work together."></picture></h2>
-
-<p align="center">
-  I'm looking for <b>AI engineering</b> roles: LLM agents, evals, and the cloud and security work that gets them to production.<br>
-  If your team is shipping AI to real users and cares about doing it securely, I'd love to talk.
-</p>
-
-<p align="center"><a href="mailto:arya.mahindrakar.09@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-email-dark.svg"><img src="assets/cta-email-light.svg" width="123" alt="Email me"></picture></a><a href="https://github.com/Arya-9989?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-repos-dark.svg"><img src="assets/cta-repos-light.svg" width="190" alt="Browse my repos"></picture></a></p>
-
-<p align="center">
-  <a href="mailto:arya.mahindrakar.09@gmail.com">arya.mahindrakar.09@gmail.com</a><br>
-  <a href="https://github.com/Arya-9989">github.com/Arya-9989</a>
-  <br><a href="https://www.linkedin.com/in/arya-mahindrakar/">linkedin.com/in/arya-mahindrakar</a>
-</p>
+[Email me](mailto:arya.mahindrakar.09@gmail.com) · [LinkedIn](https://www.linkedin.com/in/arya-mahindrakar/) · [Browse my repositories](https://github.com/Arya-9989?tab=repositories)
