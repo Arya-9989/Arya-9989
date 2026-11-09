@@ -6,8 +6,9 @@
     python scripts/build_profile.py --check    # validate the optimised assets
 
 Needs `pip install playwright` (plus `playwright install chromium`). The first run
-downloads three measuring fonts into scripts/.cache. Repository descriptions are
+downloads three measuring fonts into scripts/.cache. Repository languages are
 read live with the GitHub CLI (or the public API) and fall back to REPOS below.
+Descriptions, highlights and proof are always curated locally.
 
 Every SVG has a light and a dark variant. The README picks one with
 <picture><source media="(prefers-color-scheme: dark)">, which GitHub's
@@ -871,27 +872,37 @@ def pill(label: str, theme: str, filled: bool, side: str):
 
 
 # ---------------------------------------------------------------- content
-REPOS = [  # fallback copies; build() refreshes desc and lang from GitHub
+REPOS = [  # curated copy; build() refreshes only language from GitHub
     dict(key="autoswe", slug="Autonomous-AI-Software-Engineering-Platform", name="AutoSWE", lang="Python", flagship=True,
-         desc="AutoSWE: multi-agent LLM platform (Claude) that turns a plain-English spec into a tested, deployable project in Python, TypeScript or Go. Generated tests run in a locked-down sandbox with a repair loop; eval regression gate in CI; token budgets; OpenTelemetry agent tracing; KEDA workers. 570+ tests."),
-    dict(key="securecart", slug="SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform", name="SecureCart", lang="TypeScript",
-         desc="Security-focused full-stack e-commerce: Django REST + React/TypeScript. Rotating refresh tokens with reuse detection and session epochs, email verification, Stripe webhooks, Redis rate limits, validated image uploads, invoices, strict CSP, Trivy-gated images, Kubernetes with TLS. 675 tests incl. Playwright + axe e2e."),
+         desc="Plain-English specs into code.",
+         highlights="Sandboxed test repair loop; CI eval gates; concurrent token budget reservations.",
+         proof="Proof: 95.5% CI coverage gate"),
+    dict(key="securecart", slug="SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform", name="SecureCart", lang="Python",
+         desc="A storefront with secure checkout.",
+         highlights="Row locks prevent overselling; replay-safe Stripe test webhooks; token reuse revokes sessions.",
+         proof="Proof: 531 backend tests"),
     dict(key="microservices", slug="secure-cloud-microservices-platform", name="Secure Cloud Microservices Platform", lang="Python",
-         desc="Secure cloud-native microservices: Django auth issuing RS256 JWTs (Vault-held keys, rotation, DPoP service tokens) + Java 21 Spring Boot orders (idempotency keys), Traefik, OpenTelemetry tracing, Prometheus/Alertmanager, k6 SLOs in CI, cosign-signed images with Kyverno admission, Kustomize/Helm/Argo CD. 55-test e2e."),
+         desc="Traceable auth and order services.",
+         highlights="Idempotent orders; cross-service tracing; admission rejects unsigned images or missing SBOMs.",
+         proof="Proof: 55 end-to-end tests"),
     dict(key="multitenant", slug="secure-multi-tenant-platform", name="Secure Multi-Tenant Platform", lang="Python",
-         desc="Multi-tenant SaaS backend (Django REST Framework): app-level plus PostgreSQL row-level security isolation, RBAC, MFA (TOTP/WebAuthn) and per-org OIDC SSO, refresh-token families, scoped API keys, hash-chained audit log with SIEM streaming, OpenTelemetry. 663 tests that prove cross-tenant isolation."),
+         desc="Isolated data for every tenant.",
+         highlights="Fail-closed ORM and database isolation; MFA and per-org SSO; hash-chained audit records.",
+         proof="Proof: 663 tests"),
     dict(key="momentum", slug="Momentum-Live-Stock-Tracker", name="Momentum Live Stock Tracker", lang="Python",
-         desc="Streamlit market dashboard: TradingView Lightweight Charts, tested indicators (SMA/EMA/RSI/MACD/Bollinger), saved watchlists, price and indicator alerts (in-app, email, signed webhooks), FIFO portfolio P&L, fundamentals, provider fallback. 814 tests, 96% coverage, Dockerized."),
+         desc="Markets, portfolios and alerts.",
+         highlights="Decimal FIFO includes fees; signed alert webhooks; optional market data provider fallback.",
+         proof="Proof: 3 CI jobs"),
 ]
 
 # AutoSWE's five agents, as named in its pipeline (src/autoswe/pipeline/agents.py)
 AUTOSWE_AGENTS = ["Analyst", "Architect", "Coder", "DevOps", "Reviewer"]
 
 STATS = [
-    ("99.9%", "Uptime at $0 hosting cost", "EcoQuest"),
-    ("↓ 90%", "Deployment downtime", "20 min → under 2 min on EC2"),
-    ("↓ 40%", "Database read latency", "MongoDB indexing + caching"),
-    ("10+ hrs", "Saved every week", "Airflow ETL automation"),
+    ("500", "Backend tests", "AutoSWE test suite"),
+    ("95.5%", "Coverage gate", "AutoSWE CI minimum"),
+    ("30 / 30", "Planning-agent eval", "mcp-agent: 10 tasks across 3 runs"),
+    ("30/30", "Agent-team eval", "mcp-agent · 3 runs"),
 ]
 
 # What I do: AI first. Each AI tile is backed by code (see the commit message for sources).
@@ -911,11 +922,11 @@ CAPS = [
     ("Build", "Django · Node.js · React",
      "Full-stack apps and REST APIs, plus **Django templates with progressive JavaScript enhancement** in EcoQuest"),
     ("Ship", "Jenkins · GitHub Actions · Docker",
-     "CI/CD pipelines and zero-downtime releases that cut deploy downtime **from 20 min to under 2**"),
+     "CI/CD pipelines with **eval regression gates**, container builds and deployment manifests"),
     ("Run", "AWS · Linux · Bash",
      "AWS EC2, S3, IAM, VPC and RDS, with Linux process management and Bash automation"),
-    ("Automate", "PostgreSQL · MongoDB · Go",
-     "Airflow ETL pipelines and Go ingestion services that **save 10+ hours a week**"),
+    ("Automate", "MCP · Python · agent workflows",
+     "Agent workflows with **bounded tool calls**, schema-checked arguments and execution traces"),
 ]
 
 STACK = [
@@ -950,11 +961,11 @@ EDU = [
 
 
 def refresh_repos():
-    """Use the live GitHub description and language; keep the stored copy if offline."""
+    """Refresh language from GitHub; preserve curated copy and offline labels."""
     for r in REPOS:
         live = None
         try:
-            out = subprocess.run(["gh", "repo", "view", f"{GH_USER}/{r['slug']}", "--json", "description,primaryLanguage"],
+            out = subprocess.run(["gh", "repo", "view", f"{GH_USER}/{r['slug']}", "--json", "primaryLanguage"],
                                  capture_output=True, text=True, timeout=30, encoding="utf-8")
             if out.returncode == 0:
                 live = json.loads(out.stdout)
@@ -964,14 +975,11 @@ def refresh_repos():
             try:
                 with urllib.request.urlopen(f"https://api.github.com/repos/{GH_USER}/{r['slug']}", timeout=20) as resp:  # noqa: S310
                     d = json.loads(resp.read())
-                live = {"description": d.get("description"), "primaryLanguage": {"name": d.get("language")}}
+                live = {"primaryLanguage": {"name": d.get("language")}}
             except OSError:
-                print(f"note: {r['slug']}: GitHub unreachable, using the stored description")
+                print(f"note: {r['slug']}: GitHub unreachable, using the stored language")
                 continue
-        desc, lang = live.get("description"), (live.get("primaryLanguage") or {}).get("name")
-        if desc and desc != r["desc"]:
-            print(f"note: {r['slug']}: description changed on GitHub; using the live text (update REPOS to match)")
-            r["desc"] = desc
+        lang = (live.get("primaryLanguage") or {}).get("name")
         if lang and lang != r["lang"]:
             r["lang"] = lang
 
@@ -1114,13 +1122,15 @@ def build():
             eb = ("Flagship AI project · " if r.get("flagship") else "") + r["lang"]
             if mode == "w":
                 return [Block(eb, 14 * s, 18 * s, 600, "acc"), Block(r["name"], 26 * s, 31 * s, 600, "fg", fam="d"),
-                        Block(r["desc"], 16.5 * s, 23.5 * s, 400, "fg2", gap=10 * s)]
+                        *[Block(r[key], 16.5 * s, 23.5 * s, 400, "fg2", gap=10 * s)
+                          for key in ("desc", "highlights", "proof")]]
             return [Block(eb, floor * s, floor * s * 1.2, 600, "acc"), Block(r["name"], 30 * s, 35 * s, 600, "fg", fam="d"),
-                    Block(r["desc"], floor * s, floor * s * 1.32, 400, "fg2", gap=10 * s)]
+                    *[Block(r[key], floor * s, floor * s * 1.32, 400, "fg2", gap=10 * s)
+                      for key in ("desc", "highlights", "proof")]]
 
         def bottom(mode, s):
             return [Block("View on GitHub ›", 16 * s if mode == "w" else floor * s, 20, 400, "link")]
-        desc = r["desc"]
+        desc = " ".join(r[key] for key in ("desc", "highlights", "proof"))
         if desc.startswith(r["name"] + ": "):
             desc = desc[len(r["name"]) + 2:]
         alt = f"{r['name']}, {r['lang']} repository on GitHub: {desc}"
