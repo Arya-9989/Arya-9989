@@ -5,9 +5,9 @@
     svgo --config scripts/svgo.config.mjs -q -f assets
     python scripts/build_profile.py --check    # validate the optimised assets
 
-Needs `pip install playwright` (plus `playwright install chromium`) and the existing
-measuring fonts in scripts/.cache. Builds never download fonts. Public repository
-languages are refreshed through GitHub; summaries stay tied to reviewed local code.
+Needs `pip install playwright` (plus `playwright install chromium`). The first run
+downloads three measuring fonts into scripts/.cache. Repository descriptions are
+read live with the GitHub CLI (or the public API) and fall back to REPOS below.
 
 Every SVG has a light and a dark variant. The README picks one with
 <picture><source media="(prefers-color-scheme: dark)">, which GitHub's
@@ -138,9 +138,12 @@ FALLBACK = ["M-DejaVu"]
 
 
 def font_file(url: str) -> Path:
+    CACHE.mkdir(parents=True, exist_ok=True)
     p = CACHE / url.rsplit("/", 1)[1]
     if not p.exists():
-        raise RuntimeError(f"Missing cached measuring font: {p}. This build does not download fonts.")
+        print("downloading", url)
+        with urllib.request.urlopen(url, timeout=60) as r:  # noqa: S310 (pinned https URL)
+            p.write_bytes(r.read())
     return p
 
 
@@ -868,42 +871,86 @@ def pill(label: str, theme: str, filled: bool, side: str):
 
 
 # ---------------------------------------------------------------- content
-REPOS = [
+REPOS = [  # fallback copies; build() refreshes desc and lang from GitHub
+    dict(key="autoswe", slug="Autonomous-AI-Software-Engineering-Platform", name="AutoSWE", lang="Python", flagship=True,
+         desc="AutoSWE: multi-agent LLM platform (Claude) that turns a plain-English spec into a tested, deployable project in Python, TypeScript or Go. Generated tests run in a locked-down sandbox with a repair loop; eval regression gate in CI; token budgets; OpenTelemetry agent tracing; KEDA workers. 570+ tests."),
     dict(key="securecart", slug="SecureCart-Cloud-Native-Security-Enhanced-eCommerce-Platform", name="SecureCart", lang="TypeScript",
-         desc="Django REST + React commerce with rotating refresh tokens, signed Stripe webhooks and row-locked checkout tested against concurrent buyers."),
-    dict(key="microservices", slug="secure-cloud-microservices-platform", name="Secure Cloud Microservices", lang="Python",
-         desc="Django + Java Spring Boot services with JWT/JWKS, OpenTelemetry, signed container images and Kubernetes admission policies."),
+         desc="Security-focused full-stack e-commerce: Django REST + React/TypeScript. Rotating refresh tokens with reuse detection and session epochs, email verification, Stripe webhooks, Redis rate limits, validated image uploads, invoices, strict CSP, Trivy-gated images, Kubernetes with TLS. 675 tests incl. Playwright + axe e2e."),
+    dict(key="microservices", slug="secure-cloud-microservices-platform", name="Secure Cloud Microservices Platform", lang="Python",
+         desc="Secure cloud-native microservices: Django auth issuing RS256 JWTs (Vault-held keys, rotation, DPoP service tokens) + Java 21 Spring Boot orders (idempotency keys), Traefik, OpenTelemetry tracing, Prometheus/Alertmanager, k6 SLOs in CI, cosign-signed images with Kyverno admission, Kustomize/Helm/Argo CD. 55-test e2e."),
     dict(key="multitenant", slug="secure-multi-tenant-platform", name="Secure Multi-Tenant Platform", lang="Python",
-         desc="Django tenant isolation enforced by ORM scoping and PostgreSQL row-level security, with cross-tenant attack tests and a hash-chained audit log."),
-    dict(key="ecoquest", slug="EcoQuest", name="EcoQuest", lang="Python",
-         desc="Django learning platform with teacher-scoped classrooms, replay-safe quiz grading, transaction-protected rewards and a retryable email outbox."),
-    dict(key="momentum", slug="Momentum-Live-Stock-Tracker", name="Momentum", lang="Python",
-         desc="Typed Streamlit market dashboard with tested indicators, saved watchlists, price alerts and FIFO portfolio accounting."),
+         desc="Multi-tenant SaaS backend (Django REST Framework): app-level plus PostgreSQL row-level security isolation, RBAC, MFA (TOTP/WebAuthn) and per-org OIDC SSO, refresh-token families, scoped API keys, hash-chained audit log with SIEM streaming, OpenTelemetry. 663 tests that prove cross-tenant isolation."),
+    dict(key="momentum", slug="Momentum-Live-Stock-Tracker", name="Momentum Live Stock Tracker", lang="Python",
+         desc="Streamlit market dashboard: TradingView Lightweight Charts, tested indicators (SMA/EMA/RSI/MACD/Bollinger), saved watchlists, price and indicator alerts (in-app, email, signed webhooks), FIFO portfolio P&L, fundamentals, provider fallback. 814 tests, 96% coverage, Dockerized."),
 ]
 
-# Stage names match AutoSWE's src/autoswe/pipeline/agents.py.
+# AutoSWE's five agents, as named in its pipeline (src/autoswe/pipeline/agents.py)
 AUTOSWE_AGENTS = ["Analyst", "Architect", "Coder", "DevOps", "Reviewer"]
 
+STATS = [
+    ("99.9%", "Uptime at $0 hosting cost", "EcoQuest"),
+    ("↓ 90%", "Deployment downtime", "20 min → under 2 min on EC2"),
+    ("↓ 40%", "Database read latency", "MongoDB indexing + caching"),
+    ("10+ hrs", "Saved every week", "Airflow ETL automation"),
+]
+
+# What I do: AI first. Each AI tile is backed by code (see the commit message for sources).
 CAPS = [
-    ("Orchestrate", "Typed agent stages, MCP tools and checkpointed execution with explicit tool approvals."),
-    ("Retrieve", "Hybrid RAG, reranking, source citations and persistent memory with update and deletion."),
-    ("Evaluate", "Regression gates, answer faithfulness checks and offline providers for repeatable tests."),
-    ("Constrain", "Schema-validated tool calls, isolated code execution and bounded agent and repair loops."),
-    ("Account", "Token budgets, cost reports and context trimming; traces connect model and tool calls."),
-    ("Ship", "FastAPI services, persisted jobs, live SSE progress, Docker, CI and Kubernetes manifests."),
+    ("Extend with AI", "Anthropic API · AutoSWE",
+     "LLM-powered project generation in **Python, TypeScript and Go**, plus GenAI and RAG fundamentals"),
+    ("Multi-agent orchestration", "Claude · FastAPI · AutoSWE",
+     "A **five-agent LLM pipeline** (analyst → architect → coder → DevOps → reviewer) whose generated tests run in a **locked-down sandbox** and feed a bounded repair loop"),
+    ("Tool calling, MCP & RAG", "MCP · Ollama · OpenAI-compatible APIs",
+     "Tool-calling agents, **MCP tools**, embeddings and semantic search, and persistent agent memory"),
+    ("LLM evals & testing", "pytest · GitHub Actions",
+     "An **eval harness with regression gates in CI** across 3 stacks, scheduled LLM answer evals, and offline providers that make agents testable without API keys"),
+    ("Guardrails", "Claude AI · AutoSWE",
+     "**Policy checks on every generated file**, sandboxed test execution, and per-user token budgets"),
+    ("Secure & Observe", "OpenTelemetry · Grafana · Wazuh",
+     "JWT, RBAC and IAM policies, **OpenTelemetry traces of every agent step**, Grafana alerting and Wazuh SIEM"),
+    ("Build", "Django · Node.js · React",
+     "Full-stack apps and REST APIs, plus **Django templates with progressive JavaScript enhancement** in EcoQuest"),
+    ("Ship", "Jenkins · GitHub Actions · Docker",
+     "CI/CD pipelines and zero-downtime releases that cut deploy downtime **from 20 min to under 2**"),
+    ("Run", "AWS · Linux · Bash",
+     "AWS EC2, S3, IAM, VPC and RDS, with Linux process management and Bash automation"),
+    ("Automate", "PostgreSQL · MongoDB · Go",
+     "Airflow ETL pipelines and Go ingestion services that **save 10+ hours a week**"),
 ]
 
 STACK = [
-    ("Agents & retrieval", "Python · FastAPI · MCP · LangGraph · OpenAI-compatible APIs · Ollama · RAG"),
-    ("Quality & observability", "pytest · Playwright · OpenTelemetry · Prometheus · Grafana · Wazuh SIEM"),
-    ("Cloud & delivery", "Docker · Kubernetes · Terraform · GitHub Actions · Jenkins"),
-    ("Backend & data", "Django REST Framework · Spring Boot · PostgreSQL · Redis"),
-    ("Interfaces", "React · TypeScript · Streamlit"),
+    ("AI agents & LLMs", "Multi-agent pipelines · MCP · tool calling",
+     "Anthropic & OpenAI-compatible APIs · Ollama · embeddings & semantic search · agent memory · LLM evals"),
+    ("AI / ML", "Claude AI · Generative AI · RAG", "Supervised & unsupervised learning · model evaluation metrics"),
+    ("Languages", "Python · Java · JavaScript · TypeScript · Go · Bash", None),
+    ("Backend", "Django · Node.js · Express · FastAPI · Spring Boot",
+     "Django REST Framework · RESTful APIs · Django sessions · SQLAlchemy · Flyway · OpenAPI"),
+    ("Frontend", "React · TypeScript · Tailwind · HTML · CSS",
+     "React 19 · Zustand · Progressive Web Apps · Vite · TanStack Query · React Hook Form + Zod · Django templates · Bootstrap"),
+    ("Cloud & DevOps", "AWS · Docker · Jenkins · GitHub Actions · Linux · Git · GitHub",
+     "AWS EC2 · S3 · IAM · VPC · RDS · Linux process management"),
+    ("Platform & IaC", "Kubernetes · Terraform · Traefik · Nginx",
+     "Docker Compose · Kustomize · network policies · gunicorn"),
+    ("Data & Orchestration", "PostgreSQL · MongoDB · Apache Airflow · Redis · SQLite",
+     "ETL pipelines · MongoDB Atlas · Hadoop / Spark (exposure) · Streamlit · Plotly · pandas · NumPy"),
+    ("Security & Observability", "Grafana · Wazuh SIEM · Prometheus",
+     "JWT auth · RBAC · rate limiting · Helmet · CORS · IAM policies · OAuth2 / JWKS · Argon2 · CSP · Trivy · pip-audit"),
+    ("Testing & Quality", "pytest · Vitest · Playwright · JUnit 5 · Testcontainers",
+     "ruff · mypy (strict) · ESLint · Prettier · axe accessibility checks"),
+    ("Currently exploring", "Machine Learning, Computer Vision and Generative AI (RAG)", None),
+    ("Ask me about", "CI/CD pipelines · Django & Node.js backends · AWS · SIEM monitoring", None),
+]
+
+EDU = [
+    ("Education", "B.Tech, Cloud Technology & Information Security", "Ajeenkya D Y Patil University, Pune · 2022 – 2026",
+     "Cloud Computing · Network Security · Information Security · Operating Systems · DBMS · Software Engineering · Data Structures & Algorithms"),
+    ("Certification", "AWS Certified Cloud Practitioner", "Amazon Web Services · Apr 2026 – Apr 2029",
+     "EC2 · S3 · IAM · VPC networking · security groups · load balancing · cloud deployment best practices"),
 ]
 
 
 def refresh_repos():
-    """Refresh public repository languages; keep the locally evidenced summaries."""
+    """Use the live GitHub description and language; keep the stored copy if offline."""
     for r in REPOS:
         live = None
         try:
@@ -923,7 +970,8 @@ def refresh_repos():
                 continue
         desc, lang = live.get("description"), (live.get("primaryLanguage") or {}).get("name")
         if desc and desc != r["desc"]:
-            print(f"note: {r['slug']}: live description differs; keeping the reviewed profile summary")
+            print(f"note: {r['slug']}: description changed on GitHub; using the live text (update REPOS to match)")
+            r["desc"] = desc
         if lang and lang != r["lang"]:
             r["lang"] = lang
 
@@ -964,7 +1012,7 @@ def autoswe_art(theme, mode, x, y, w, s):
     # on phones the five names do not fit one line: alternate them over two lines
     rows = [[0, 1, 2, 3, 4]] if mode == "w" and all(
         (lw[i] + lw[i + 1]) / 2 + 8 <= gap for i in range(4)) else [[0, 2, 4], [1, 3]]
-    out = [f'<path d="M{c0:g} {cy:g}H{c4:g}" stroke="{th["fg2"]}" stroke-width="2" stroke-linecap="round"/>']
+    out = [f'<path d="M{c0:g} {cy:g}H{c4:g}" stroke="{th["hair"]}" stroke-width="2" stroke-linecap="round"/>']
     for i in range(5):
         cx = c0 + i * gap
         out.append(f'<circle cx="{cx:g}" cy="{cy:g}" r="{r:g}" fill="{acc}"/>')
@@ -986,26 +1034,145 @@ def build():
     for f in ASSETS.glob("*.svg"):
         f.unlink()
     refresh_repos()
+    md = []
+
+    # hero
     out = {t: hero(t) for t in THEMES}
     write("hero", {t: v[0] for t, v in out.items()})
-    intro = f'<p align="center">{pic("hero", str(COL), out["light"][1])}</p>'
+    md.append(f'<p align="center">{pic("hero", str(COL), out["light"][1])}</p>')
+
     e = {t: pill("Email me", t, True, "right") for t in THEMES}
     r = {t: pill("Browse my repos", t, False, "left") for t in THEMES}
     write("cta-email", {t: v[0] for t, v in e.items()})
     write("cta-repos", {t: v[0] for t, v in r.items()})
-    buttons = (f'<p align="center"><a href="mailto:{EMAIL}">{pic("cta-email", str(e["light"][2]), "Email me")}</a>'
-               f'<a href="{GH}?tab=repositories">{pic("cta-repos", str(r["light"][2]), "Browse my repos")}</a></p>')
-    intro += "\n\n" + buttons
-    alt = "AutoSWE pipeline: Analyst, Architect, Coder, DevOps, Reviewer."
-    for theme in THEMES:
-        diagram_art, motion, art_h = autoswe_art(theme, "n", 28, 12, 364, 1)
-        height = round(art_h + 24)
-        write("autoswe-pipeline", {theme: svg_doc(420, height, alt,
-              diagram_art, motion, "pipeline")})
-    diagram = f'<p align="center">{pic("autoswe-pipeline", "420", alt)}</p>'
-    skills = "\n".join(f"- **{title}.** {text}" for title, text in CAPS)
-    cta = f'[Email me](mailto:{EMAIL}) · [LinkedIn](https://www.linkedin.com/in/arya-mahindrakar/) · [Browse my repositories]({GH}?tab=repositories)'
-    return [diagram, "@@PROJECTS@@", skills], cta, intro
+    cta = (f'<p align="center"><a href="mailto:{EMAIL}">{pic("cta-email", str(e["light"][2]), "Email me")}</a>'
+           f'<a href="{GH}?tab=repositories">{pic("cta-repos", str(r["light"][2]), "Browse my repos")}</a></p>')
+    md.append(cta)
+
+    def head(name, text, tag="h2", **kw):
+        o = {t: headline(t, text, ident=name.replace("-", ""), **kw) for t in THEMES}
+        write(name, {t: v[0] for t, v in o.items()})
+        p = pic(name, str(COL), o["light"][1])
+        return f'<{tag} align="center">{p}</{tag}>' if tag else f'<p align="center">{p}</p>'
+
+    # about
+    md.append("<!-- About -->")
+    md.append(head("h-about", "I turn code into reliable, secure production systems.", eyebrow="About me", size=56,
+                   lines_w=["I turn code into reliable,", "secure production systems."]))
+    md.append("<p align=\"center\">I work across the whole path to production: I write the backend, build the pipeline that ships it, "
+              "run it on AWS, and set up the monitoring and security that keep it healthy. "
+              "Then I measure the result and make it faster.</p>")
+
+    # what I do: AI first
+    md.append(head("h-what", "What I do.", tag="h3", sub="AI Integrations · DevOps · Cloud · Security"))
+    floor = MIN_PX * 420 / SMALL_COL
+    tiles = []
+    for i, (title, tech, text) in enumerate(CAPS):
+        def top(mode, s, title=title, tech=tech, text=text):
+            if mode == "w":
+                return [Block(tech, 13.5 * s, 18 * s, 600, "fg2", list_mode=True),
+                        Block(title, 24 * s, 29 * s, 600, "fg", gap=10 * s, fam="d"),
+                        Block(text, 16 * s, 22.5 * s, 400, "fg2", gap=9 * s, bold_color="fg")]
+            return [Block(tech, floor * s, floor * s * 1.25, 600, "fg2", list_mode=True),
+                    Block(title, 30 * s, 35 * s, 600, "fg", gap=10 * s, fam="d"),
+                    Block(text, floor * s, floor * s * 1.32, 400, "fg2", gap=10 * s, bold_color="fg")]
+        tiles.append(Tile(top, alt=f"{title}: {speech(text)}. {speech(tech)}.", ident=f"c{i}"))
+    md.append(group("cap", tiles, 420, pad_w=28, pad_n=24, radius=24, eq=2, phone=True))
+
+    # impact
+    md.append("<!-- Impact -->")
+    md.append(head("h-impact", "Impact at a glance."))
+    chunks = [STATS[:2], STATS[2:]]
+    sh = max(stat_pair(c, t) for c in chunks for t in THEMES)
+    pairs = []
+    for i, chunk in enumerate(chunks):
+        o = {t: stat_pair(chunk, t, sh, base_delay=0.15 + i * 0.24, ident=f"s{i}") for t in THEMES}
+        write(f"impact-{i + 1}", {t: v[0] for t, v in o.items()})
+        pairs.append(pic(f"impact-{i + 1}", "420", o["light"][1]))
+    md.append(f'<p align="center">{"".join(pairs)}</p>')
+
+    # stack: AI first
+    md.append("<!-- Tech stack -->")
+    md.append(head("h-stack", "Tech stack."))
+    tiles = []
+    for i, (lab, items, det) in enumerate(STACK):
+        def top(mode, s, lab=lab, items=items, det=det):
+            bl = [Block(lab, 13, 18, 600, "fg2"), Block(items, 17, 23, 600, "fg", gap=8, list_mode=True)]
+            if det:
+                bl.append(Block(det, 14, 19, 400, "fg2", gap=8, list_mode=True))
+            return bl
+        alt = f"{lab}: {speech(items)}" + (f"; {speech(det)}." if det else ".")
+        tiles.append(Tile(top, alt=alt, ident=f"k{i}"))
+    md.append(group("stack", tiles, 280, pad_w=22, eq=6))
+
+    # repositories: AutoSWE first, as the flagship, beside the shape of its pipeline
+    md.append("<!-- Open-source repositories -->")
+    md.append(head("h-repos", "Open-source repositories."))
+    tiles, links, names = [], [], []
+    for r in REPOS:
+        def top(mode, s, r=r):
+            eb = ("Flagship AI project · " if r.get("flagship") else "") + r["lang"]
+            if mode == "w":
+                return [Block(eb, 14 * s, 18 * s, 600, "acc"), Block(r["name"], 26 * s, 31 * s, 600, "fg", fam="d"),
+                        Block(r["desc"], 16.5 * s, 23.5 * s, 400, "fg2", gap=10 * s)]
+            return [Block(eb, floor * s, floor * s * 1.2, 600, "acc"), Block(r["name"], 30 * s, 35 * s, 600, "fg", fam="d"),
+                    Block(r["desc"], floor * s, floor * s * 1.32, 400, "fg2", gap=10 * s)]
+
+        def bottom(mode, s):
+            return [Block("View on GitHub ›", 16 * s if mode == "w" else floor * s, 20, 400, "link")]
+        desc = r["desc"]
+        if desc.startswith(r["name"] + ": "):
+            desc = desc[len(r["name"]) + 2:]
+        alt = f"{r['name']}, {r['lang']} repository on GitHub: {desc}"
+        tiles.append(Tile(top, bottom, motif=r["key"], accent=REPO_ACCENT[r["key"]], alt=alt, ident=f"r{r['key']}"))
+        links.append(f"{GH}/{r['slug']}")
+        names.append(r["key"])
+        if r["key"] == "autoswe":
+            def a_top(mode, s):
+                if mode == "w":
+                    return [Block("How AutoSWE works", 14 * s, 18 * s, 600, "acc"),
+                            Block("Plain-English spec in. Deployable project out.", 24 * s, 29 * s, 600, "fg", fam="d"),
+                            Block("Five agents hand the work along. Every generated file is parsed and policy-checked, "
+                                  "with an automatic repair pass.", 16.5 * s, 23.5 * s, 400, "fg2", gap=10 * s)]
+                return [Block("How AutoSWE works", floor * s, floor * s * 1.2, 600, "acc"),
+                        Block("Plain-English spec in. Deployable project out.", 28 * s, 33 * s, 600, "fg", fam="d"),
+                        Block("Five agents hand the work along. Every generated file is parsed and policy-checked, "
+                              "with an automatic repair pass.", floor * s, floor * s * 1.32, 400, "fg2", gap=10 * s)]
+            alt2 = ("How AutoSWE works: plain-English spec in, deployable project out. Five agents hand the work along: "
+                    "analyst, architect, coder, DevOps and reviewer. Every generated file is parsed and policy-checked, "
+                    "with an automatic repair pass.")
+            tiles.append(Tile(a_top, None, accent=REPO_ACCENT["autoswe"], alt=alt2, ident="rflow", art=autoswe_art,
+                              motif_row=True))
+            links.append(f"{GH}/{r['slug']}")
+            names.append("autoswe-flow")
+    md.append(group("repo", tiles, 420, pad_w=30, pad_n=24, radius=24, links=links, names=names, eq=2, phone=True))
+
+    md.append("<!-- Featured projects -->")
+    md.append(head("h-projects", "Featured projects."))
+    md.append("@@PROJECTS@@")
+
+    # education
+    md.append("<!-- Education -->")
+    md.append(head("h-edu", "Education & certification."))
+    tiles = []
+    for i, (eb, title, org, det) in enumerate(EDU):
+        def top(mode, s, eb=eb, title=title, org=org, det=det):
+            if mode == "w":
+                return [Block(eb, 14 * s, 18 * s, 600, "fg2"), Block(title, 24 * s, 29 * s, 600, "fg", gap=10 * s, fam="d"),
+                        Block(org, 16 * s, 22 * s, 600, "fg", gap=10 * s, list_mode=True),
+                        Block(det, 15 * s, 21 * s, 400, "fg2", gap=12 * s, list_mode=True)]
+            return [Block(eb, floor * s, floor * s * 1.2, 600, "fg2"), Block(title, 30 * s, 35 * s, 600, "fg", gap=9 * s, fam="d"),
+                    Block(org, floor * s, floor * s * 1.3, 600, "fg", gap=9 * s, list_mode=True),
+                    Block(det, floor * s, floor * s * 1.3, 400, "fg2", gap=11 * s, list_mode=True)]
+        tiles.append(Tile(top, alt=f"{eb}: {title}. {speech(org)}. {speech(det)}.", ident=f"e{i}"))
+    md.append(group("edu", tiles, 420, pad_w=30, pad_n=24, radius=24, names=["degree", "aws"], eq=2, phone=True))
+
+    # motto + contact
+    md.append("<!-- Contact -->")
+    md.append(head("h-motto", "Secure by design, scalable by default.", tag=None, eyebrow="Motto", size=64, gradient=True,
+                   lines_w=["Secure by design,", "scalable by default."]))
+    md.append(head("h-contact", "Let’s work together.", top_air=64))
+    return md, cta
 
 
 def main():
@@ -1014,17 +1181,12 @@ def main():
     with sync_playwright() as p:
         b = p.chromium.launch()
         M = Measurer(b.new_page())
-        md, cta, intro = build()
+        md, cta = build()
         b.close()
     template = (ROOT / "scripts" / "README.template.md").read_text(encoding="utf-8")
     parts = "\n\n".join(md)
     head_part, tail_part = parts.split("@@PROJECTS@@")
     out = template.replace("@@TOP@@", head_part.strip()).replace("@@BOTTOM@@", tail_part.strip()).replace("@@CTA@@", cta)
-    out = out.replace("@@HERO@@", intro)
-    repos = "\n\n".join(f"- [{r['name']}]({GH}/{r['slug']}): {r['desc']}" for r in REPOS)
-    stack = "\n\n".join(f"**{label}:** {items}" for label, items in STACK)
-    out = out.replace("@@REPOS@@", repos).replace("@@STACK@@", stack)
-    assert "@@" not in out, "Unresolved template placeholder"
     (ROOT / "README.md").write_text(out, encoding="utf-8", newline="\n")
     print("wrote README.md and", len(list(ASSETS.glob("*.svg"))), "SVGs")
 
